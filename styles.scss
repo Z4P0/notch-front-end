@@ -1,4 +1,5 @@
 $yellow: #ffeb3e;
+$sticky-note-yellow: #fffacc;
 $grey: #a0a0a0;
 
 html {
@@ -16,13 +17,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
+
 h1 {
   font-size: 3.125rem;
   line-height: 1;
 }
-p, ul {
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol {
   margin-top: 0;
-  // margin-bottom: 1rem;
 }
 
 img {
@@ -101,4 +104,34 @@ figure img {
       content: ","
     }
   }
+}
+
+.note {
+  font-family: 'Roboto Mono';
+  font-size: 0.6875rem;
+  line-height: 1.275;
+  background-color: $sticky-note-yellow;
+  padding: 1rem 1rem 0.5rem;
+  margin-bottom: 1rem;
+  max-width: 10rem;
+  min-height: 10rem;
+  ul {
+    padding-left: 1rem;
+  }
+  ol {
+    padding-left: 1.5rem;
+  }
+}
+
+
+.post--with_notes {
+  display: flex;
+  .article-notes {
+    flex-basis: -moz-available;
+  }
+}
+
+.article-content,
+.article-notes {
+  padding-right: 1rem;
 }
