@@ -8,7 +8,7 @@
     "html:watch": "pug --pretty --watch pug/*.pug --out html/",
     "css": "node-sass --output css/ scss/",
     "css:watch": "node-sass --watch --source-map true --output css/ scss/",
-    "postcss": "postcss css/honeycomb.css --no-map --use autoprefixer --use css-mqpacker --use cssnano --output css/honeycomb.min.css",
+    "postcss": "postcss css/styles.css --no-map --use autoprefixer --use css-mqpacker --use cssnano --output css/styles.min.css",
     "regular-server": "http-server --silent -o",
     "live-reload": "live-server --quiet --port=4040 --open=html --watch=html/,css/",
     "servers": "npm run live-reload & npm run regular-server",
