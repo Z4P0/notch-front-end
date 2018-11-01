@@ -135,3 +135,49 @@ figure img {
 .article-notes {
   padding-right: 1rem;
 }
+
+button {
+  // button reset
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.button--new-post {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  background-color: $yellow;
+  position: relative;
+  transition: background-color 0.3s ease;
+  will-change: background-color;
+  &:before,
+  &:after {
+    content: "\0a0";
+    display: block;
+    width: 2px;
+    height: 26px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  &:before {
+    transform: translateY(-50%) rotate(90deg);
+  }
+  &:after {
+    transform: translateY(-50%);
+  }
+  span {
+    visibility: hidden;
+  }
+  &:hover {
+    background-color: scale-color($yellow, $lightness:-20%);
+  }
+}

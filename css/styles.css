@@ -101,3 +101,39 @@ figure img {
 .article-content,
 .article-notes {
   padding-right: 1rem; }
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none; }
+  button::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+
+.button--new-post {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  background-color: #ffeb3e;
+  position: relative;
+  transition: background-color 0.3s ease;
+  will-change: background-color; }
+  .button--new-post:before, .button--new-post:after {
+    content: "\0a0";
+    display: block;
+    width: 2px;
+    height: 26px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%; }
+  .button--new-post:before {
+    transform: translateY(-50%) rotate(90deg); }
+  .button--new-post:after {
+    transform: translateY(-50%); }
+  .button--new-post span {
+    visibility: hidden; }
+  .button--new-post:hover {
+    background-color: #fee300; }
