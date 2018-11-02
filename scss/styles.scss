@@ -1,6 +1,9 @@
 $yellow: #ffeb3e;
+$yellow-hover: scale-color($yellow, $lightness:-22%);
 $sticky-note-yellow: #fffacc;
 $grey: #a0a0a0;
+
+$border-radius: 5px;
 
 html {
   box-sizing: border-box;
@@ -12,6 +15,7 @@ html {
 body {
   font-family: 'ATC Arquette';
   line-height: 1.75;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,16 +35,92 @@ p, ul, ol {
 img {
   max-width: 100%;
 }
+
 figure {
   margin: 0;
 }
+
 figure img {
   display: block;
 }
 
+
+button {
+  // button reset
+  font-family: inherit;
+  // font-size: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+  // custom
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  svg {
+    width: 0.3rem;
+    padding-bottom: 2px;
+  }
+}
+
+.icon {
+  display: inline-block;
+}
+.rotate-90 {
+  transform: rotate(-90deg);
+}
+
+
+.flex {
+  display: flex;
+  .end {
+    margin-left: auto;
+  }
+}
+
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
 .button {
   background-color: $yellow;
+  line-height: 3.8181;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-radius: $border-radius;
+  transition: background-color 0.3s ease;
+  will-change: background-color;
+  &:hover {
+    background-color: $yellow-hover;
+  }
+  &.alternate {
+    background-color: #f5f4f2;
+    &:hover {
+      background-color: scale-color(#f5f4f2, $lightness:-5%);
+    }
+  }
 }
+
+
+.multicolumn--2 {
+  column-count: 2;
+}
+
+
+// Top Bar
+.top-bar {
+  border-bottom: 1px solid $grey;
+}
+
+
+
+
 
 .lead {
   font-size: 1.5rem;
@@ -136,18 +216,6 @@ figure img {
   padding-right: 1rem;
 }
 
-button {
-  // button reset
-  font-family: inherit;
-  font-size: inherit;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
-}
 
 .button--new-post {
   display: block;
@@ -178,6 +246,42 @@ button {
     visibility: hidden;
   }
   &:hover {
-    background-color: scale-color($yellow, $lightness:-20%);
+    background-color: $yellow-hover;
+  }
+}
+
+
+.new-content-modal {
+  padding: 7rem 6rem 3rem;
+}
+
+.new-content-modal__option {
+  text-align: center;
+  padding: 3rem 2.375rem;
+  border: 1px solid #ebeae8;
+  border-radius: $border-radius;
+  margin: 0 0.9375rem 3.25rem;
+  cursor: pointer;
+  &:hover {
+    border-color: $yellow;
+    // border-width: 2px;
+  }
+}
+
+.new-content-modal__option__icon-container {
+  background-color: #f6f5f3;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+.actions {
+  display: flex;
+  justify-content: center;
+  .button {
+    margin: 0 0.5rem;
   }
 }

@@ -6,7 +6,8 @@ html {
 
 body {
   font-family: 'ATC Arquette';
-  line-height: 1.75; }
+  line-height: 1.75;
+  margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
@@ -28,8 +29,57 @@ figure {
 figure img {
   display: block; }
 
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em; }
+  button::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+  button svg {
+    width: 0.3rem;
+    padding-bottom: 2px; }
+
+.icon {
+  display: inline-block; }
+
+.rotate-90 {
+  transform: rotate(-90deg); }
+
+.flex {
+  display: flex; }
+  .flex .end {
+    margin-left: auto; }
+
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
 .button {
-  background-color: #ffeb3e; }
+  background-color: #ffeb3e;
+  line-height: 3.8181;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  will-change: background-color; }
+  .button:hover {
+    background-color: #f7de00; }
+  .button.alternate {
+    background-color: #f5f4f2; }
+    .button.alternate:hover {
+      background-color: #eae8e4; }
+
+.multicolumn--2 {
+  column-count: 2; }
+
+.top-bar {
+  border-bottom: 1px solid #a0a0a0; }
 
 .lead {
   font-size: 1.5rem;
@@ -102,16 +152,6 @@ figure img {
 .article-notes {
   padding-right: 1rem; }
 
-button {
-  font-family: inherit;
-  font-size: inherit;
-  cursor: pointer;
-  background-color: transparent;
-  border: none; }
-  button::-moz-focus-inner {
-    border: 0;
-    padding: 0; }
-
 .button--new-post {
   display: block;
   height: 4rem;
@@ -136,4 +176,31 @@ button {
   .button--new-post span {
     visibility: hidden; }
   .button--new-post:hover {
-    background-color: #fee300; }
+    background-color: #f7de00; }
+
+.new-content-modal {
+  padding: 7rem 6rem 3rem; }
+
+.new-content-modal__option {
+  text-align: center;
+  padding: 3rem 2.375rem;
+  border: 1px solid #ebeae8;
+  border-radius: 5px;
+  margin: 0 0.9375rem 3.25rem;
+  cursor: pointer; }
+  .new-content-modal__option:hover {
+    border-color: #ffeb3e; }
+
+.new-content-modal__option__icon-container {
+  background-color: #f6f5f3;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+  display: flex;
+  justify-content: center; }
+
+.actions {
+  display: flex;
+  justify-content: center; }
+  .actions .button {
+    margin: 0 0.5rem; }

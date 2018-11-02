@@ -9,10 +9,37 @@ html(lang="en").no-js
     link(rel="stylesheet", href="../css/styles.css")
   body
     .container
-      button(type="button").button--new-post
-        span Make a new post
+      header.flex.top-bar
+        .start
+          select
+            option(value="all") All
+        .middle
+          a(href="#") Favorites
+        .end
+          button(type="button").button--new-post
+            span Make a new post
       main#main-content
-        article.post--with_notes
+
+        h2 New Post
+        .new-content-modal
+          button(type="button") &times;
+          .actions
+            .new-content-modal__option
+              .new-content-modal__option__icon-container
+                img(src="../icons/new-topic-folder-icon.svg", alt="", width="62")
+                //- img(src="../icons/new-topic-folder-shadow-icon.svg", alt="", width="62")
+              button(type="button") New Topic
+            .new-content-modal__option
+              .new-content-modal__option__icon-container
+                img(src="../icons/new-post-paper-icon.svg", alt="", width="46")
+                //- img(src="../icons/new-post-paper-shadow-icon.svg", alt="", width="46")
+              button(type="button") New Post
+          .actions
+            button(type="button").button.alternate Cancel
+            button(type="button").button Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg>
+
+
+        article.post--with_notes.section
           .article-content
             h1 The Alternative Culture Heritage of Hipsters
             .metadata
@@ -69,3 +96,7 @@ html(lang="en").no-js
                 li Or this
             .note
               p #[strong (4) It’s almost like annotation.] I find myself doing this a lot in my sketches, so it makes sense to have a version of it in Notch too.
+
+
+        p
+          <svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.36 93.55"><polygon points="49.18 0 64.38 30.79 98.36 35.73 73.77 59.7 79.58 93.55 49.18 77.57 18.79 93.55 24.59 59.7 0 35.73 33.98 30.79 49.18 0" fill="#ccc"/></svg>

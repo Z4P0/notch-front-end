@@ -10,9 +10,37 @@
   </head>
   <body>
     <div class="container">
-      <button class="button--new-post" type="button"><span>Make a new post</span></button>
+      <header class="flex top-bar">
+        <div class="start">
+          <select>
+            <option value="all">All</option>
+          </select>
+        </div>
+        <div class="middle"><a href="#">Favorites</a></div>
+        <div class="end">
+          <button class="button--new-post" type="button"><span>Make a new post</span></button>
+        </div>
+      </header>
       <main id="main-content">
-        <article class="post--with_notes">
+        <h2>New Post</h2>
+        <div class="new-content-modal">
+          <button type="button">&times;</button>
+          <div class="actions">
+            <div class="new-content-modal__option">
+              <div class="new-content-modal__option__icon-container"><img src="../icons/new-topic-folder-icon.svg" alt="" width="62"></div>
+              <button type="button">New Topic</button>
+            </div>
+            <div class="new-content-modal__option">
+              <div class="new-content-modal__option__icon-container"><img src="../icons/new-post-paper-icon.svg" alt="" width="46"></div>
+              <button type="button">New Post</button>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="button alternate" type="button">Cancel</button>
+            <button class="button" type="button">Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg></button>
+          </div>
+        </div>
+        <article class="post--with_notes section">
           <div class="article-content">
             <h1>The Alternative Culture Heritage of Hipsters</h1>
             <div class="metadata">
@@ -66,6 +94,7 @@
             </div>
           </div>
         </article>
+        <p><svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.36 93.55"><polygon points="49.18 0 64.38 30.79 98.36 35.73 73.77 59.7 79.58 93.55 49.18 77.57 18.79 93.55 24.59 59.7 0 35.73 33.98 30.79 49.18 0" fill="#ccc"/></svg></p>
       </main>
     </div>
   </body>
