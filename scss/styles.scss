@@ -251,8 +251,34 @@ button {
 }
 
 
-.new-content-modal {
-  padding: 7rem 6rem 3rem;
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: rgba(#000, 0.4);
+}
+.modal__content {
+  position: relative;
+  margin: auto;
+  background-color: #fff;
+  padding: 6rem 4.5rem 3rem;
+  border-radius: $border-radius;
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    padding: 0.5rem;
+    // color: #eae9e8;
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .new-content-modal__option {
@@ -283,5 +309,15 @@ button {
   justify-content: center;
   .button {
     margin: 0 0.5rem;
+  }
+}
+
+.cancel-button {
+  background-color: #f5f4f2;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+  &:hover {
+    background-color: #f5f4f2;
+    opacity: 1;
   }
 }

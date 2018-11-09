@@ -23,21 +23,23 @@
       </header>
       <main id="main-content">
         <h2>New Post</h2>
-        <div class="new-content-modal">
-          <button type="button">&times;</button>
-          <div class="actions">
-            <div class="new-content-modal__option">
-              <div class="new-content-modal__option__icon-container"><img src="../icons/new-topic-folder-icon.svg" alt="" width="62"></div>
-              <button type="button">New Topic</button>
+        <div class="modal">
+          <div class="modal__content">
+            <button class="close-button" type="button">&times;</button>
+            <div class="actions">
+              <div class="new-content-modal__option">
+                <div class="new-content-modal__option__icon-container"><img src="../icons/new-topic-folder-icon.svg" alt="" width="62"></div>
+                <button type="button">New Topic</button>
+              </div>
+              <div class="new-content-modal__option">
+                <div class="new-content-modal__option__icon-container"><img src="../icons/new-post-paper-icon.svg" alt="" width="46"></div>
+                <button type="button">New Post</button>
+              </div>
             </div>
-            <div class="new-content-modal__option">
-              <div class="new-content-modal__option__icon-container"><img src="../icons/new-post-paper-icon.svg" alt="" width="46"></div>
-              <button type="button">New Post</button>
+            <div class="actions">
+              <button class="button alternate cancel-button" type="button">Cancel</button>
+              <button class="button" type="button">Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg></button>
             </div>
-          </div>
-          <div class="actions">
-            <button class="button alternate" type="button">Cancel</button>
-            <button class="button" type="button">Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg></button>
           </div>
         </div>
         <article class="post--with_notes section">
