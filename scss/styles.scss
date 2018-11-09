@@ -316,12 +316,33 @@ button {
 
 
 .new-content-modal__option__icon-container {
-  background-color: #f6f5f3;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 10rem;
   display: flex;
   justify-content: center;
+  width: 10rem;
+  height: 10rem;
+  background-color: #f6f5f3;
+  border-radius: 10rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  .shadow {
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    transform: translate(0.25rem, -50%)
+  }
+  .icon {
+    transition: transform 0.3s ease;
+  }
+  &:hover .icon {
+    transform: translateY(-0.2rem);
+  }
+}
+.shadow.folder-shadow {
+  transform: translate(0.25rem, -30%)
+}
+.shadow.paper-shadow {
+  transform: translate(0.25rem, -45%)
 }
 
 
