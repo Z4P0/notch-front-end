@@ -26,6 +26,9 @@ h1 {
   font-size: 3.125rem;
   line-height: 1;
 }
+h2 {
+  font-size: 1.25rem;
+}
 
 h1, h2, h3, h4, h5, h6,
 p, ul, ol {
@@ -44,6 +47,12 @@ figure img {
   display: block;
 }
 
+input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+}
 
 button {
   // button reset
@@ -87,6 +96,9 @@ button {
   padding-bottom: 2rem;
 }
 
+.text-center {
+  text-align: center;
+}
 
 .button {
   background-color: $yellow;

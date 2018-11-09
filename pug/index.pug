@@ -20,11 +20,10 @@ html(lang="en").no-js
             span Make a new post
       main#main-content
 
-        h2 New Post
+        //- h2 New Post
         .modal
           //- .new-content-modal
           .modal__content
-            button(type="button").close-button &times;
             .actions
               .new-content-modal__option
                 .new-content_modal__option__content
@@ -41,6 +40,21 @@ html(lang="en").no-js
             .actions
               button(type="button").button.alternate.cancel-button Cancel
               button(type="button").button Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg>
+            button(type="button").close-button &times;
+
+        .modal
+          //- .new-content-modal
+          .modal__content
+            h2.text-center Add New Post
+            form(action="#")
+              input(type="text", placeholder="Enter title here")
+              p [WYSIWYG goes here]
+              input(type="text", placeholder="Tags")
+            .actions
+              button(type="button").button.cancel-button Cancel
+              button(type="button").button Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg>
+
+            button(type="button").close-button &times;
 
 
         article.post--with_notes.section
