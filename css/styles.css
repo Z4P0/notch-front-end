@@ -180,7 +180,7 @@ button {
 
 .modal {
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   top: 0;
   bottom: 0;
   width: 100%;
@@ -189,6 +189,7 @@ button {
 
 .modal__content {
   position: relative;
+  z-index: 1;
   margin: auto;
   background-color: #fff;
   padding: 6rem 4.5rem 3rem;
@@ -206,13 +207,31 @@ button {
 
 .new-content-modal__option {
   text-align: center;
-  padding: 3rem 2.375rem;
   border: 1px solid #ebeae8;
   border-radius: 5px;
   margin: 0 0.9375rem 3.25rem;
-  cursor: pointer; }
-  .new-content-modal__option:hover {
-    border-color: #ffeb3e; }
+  cursor: pointer;
+  position: relative;
+  z-index: 1; }
+  .new-content-modal__option:after {
+    content: "\0a0";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffeb3e;
+    border-radius: 6px;
+    transition: transform 0.2s ease-out; }
+  .new-content-modal__option:hover:after {
+    transform: scale(1.015); }
+
+.new-content_modal__option__content {
+  padding: 3rem 2.375rem;
+  background-color: #fff;
+  border-radius: 5px; }
 
 .new-content-modal__option__icon-container {
   background-color: #f6f5f3;
