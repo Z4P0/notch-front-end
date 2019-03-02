@@ -9,6 +9,8 @@ html(lang="en").no-js
     link(rel="stylesheet", href="../css/styles.css")
   body
     .container
+
+
       header.flex.top-bar
         .start
           select
@@ -16,12 +18,14 @@ html(lang="en").no-js
         .middle
           a(href="#") Favorites
         .end
-          button(type="button").button--new-post
+          button#new-post-button(type="button").button--new-post
             span Make a new post
+
+
       main#main-content
 
         //- h2 New Post
-        .modal
+        #new-post-modal.modal.hide
           //- .new-content-modal
           .modal__content
             .actions
@@ -31,7 +35,7 @@ html(lang="en").no-js
                     img.icon(src="../icons/new-topic-folder-icon.svg", alt="", width="62")
                     img.shadow.folder-shadow(src="../icons/new-topic-folder-shadow-icon.svg", alt="", width="62")
                   button(type="button") New Topic
-              .new-content-modal__option
+              #new-post-modal--open-new-post-button.new-content-modal__option
                 .new-content_modal__option__content
                   .new-content-modal__option__icon-container
                     img.icon(src="../icons/new-post-paper-icon.svg", alt="", width="46")
@@ -40,9 +44,9 @@ html(lang="en").no-js
             .actions
               button(type="button").button.alternate.cancel-button Cancel
               button(type="button").button Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg>
-            button(type="button").close-button &times;
+            button(type="button")#new-post-modal__close-buton.close-button &times;
 
-        .modal
+        #new-content-modal.modal.hide
           //- .new-content-modal
           .modal__content
             h2.text-center Add New Post
@@ -54,7 +58,7 @@ html(lang="en").no-js
               button(type="button").button.cancel-button Cancel
               button(type="button").button Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg>
 
-            button(type="button").close-button &times;
+            button(type="button")#close-button--new-content-modal.close-button &times;
 
 
         article.post--with_notes.section

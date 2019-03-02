@@ -18,11 +18,11 @@
         </div>
         <div class="middle"><a href="#">Favorites</a></div>
         <div class="end">
-          <button class="button--new-post" type="button"><span>Make a new post</span></button>
+          <button class="button--new-post" id="new-post-button" type="button"><span>Make a new post</span></button>
         </div>
       </header>
       <main id="main-content">
-        <div class="modal">
+        <div class="modal hide" id="new-post-modal">
           <div class="modal__content">
             <div class="actions">
               <div class="new-content-modal__option">
@@ -31,7 +31,7 @@
                   <button type="button">New Topic</button>
                 </div>
               </div>
-              <div class="new-content-modal__option">
+              <div class="new-content-modal__option" id="new-post-modal--open-new-post-button">
                 <div class="new-content_modal__option__content">
                   <div class="new-content-modal__option__icon-container"><img class="icon" src="../icons/new-post-paper-icon.svg" alt="" width="46"><img class="shadow paper-shadow" src="../icons/new-post-paper-shadow-icon.svg" alt="" width="46"></div>
                   <button type="button">New Post</button>
@@ -42,10 +42,10 @@
               <button class="button alternate cancel-button" type="button">Cancel</button>
               <button class="button" type="button">Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg></button>
             </div>
-            <button class="close-button" type="button">&times;</button>
+            <button class="close-button" type="button" id="new-post-modal__close-buton">&times;</button>
           </div>
         </div>
-        <div class="modal">
+        <div class="modal hide" id="new-content-modal">
           <div class="modal__content">
             <h2 class="text-center">Add New Post</h2>
             <form action="#">
@@ -57,7 +57,7 @@
               <button class="button cancel-button" type="button">Cancel</button>
               <button class="button" type="button">Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg></button>
             </div>
-            <button class="close-button" type="button">&times;</button>
+            <button class="close-button" type="button" id="close-button--new-content-modal">&times;</button>
           </div>
         </div>
         <article class="post--with_notes section">
