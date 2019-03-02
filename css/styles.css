@@ -36,7 +36,9 @@ input {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  font-size: 1rem; }
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 1rem; }
 
 button {
   font-family: inherit;
@@ -284,5 +286,11 @@ button {
   .cancel-button:hover {
     background-color: #f5f4f2;
     opacity: 1; }
+
+.ck-editor__editable {
+  min-height: 12rem; }
+
+.ck-editor {
+  margin-bottom: 1rem !important; }
 
 /*# sourceMappingURL=styles.css.map */

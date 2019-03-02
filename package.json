@@ -10,7 +10,7 @@
     "css:watch": "node-sass --watch --source-map true --output css/ scss/",
     "postcss": "postcss css/styles.css --no-map --use autoprefixer --use css-mqpacker --use cssnano --output css/styles.min.css",
     "regular-server": "http-server --silent -o",
-    "live-reload": "live-server --quiet --port=4040 --open=html --watch=html/,css/",
+    "live-reload": "live-server --quiet --port=4040 --open=html --watch=html/,css/,js/",
     "servers": "npm run live-reload & npm run regular-server",
     "build": "npm run html && npm run css",
     "watch": "npm run html:watch & npm run css:watch"

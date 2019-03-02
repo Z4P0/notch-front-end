@@ -48,7 +48,7 @@ html(lang="en").no-js
             h2.text-center Add New Post
             form(action="#")
               input(type="text", placeholder="Enter title here")
-              p [WYSIWYG goes here]
+              textarea#post-content(rows="4")
               input(type="text", placeholder="Tags")
             .actions
               button(type="button").button.cancel-button Cancel
@@ -118,3 +118,7 @@ html(lang="en").no-js
 
         p
           <svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.36 93.55"><polygon points="49.18 0 64.38 30.79 98.36 35.73 73.77 59.7 79.58 93.55 49.18 77.57 18.79 93.55 24.59 59.7 0 35.73 33.98 30.79 49.18 0" fill="#ccc"/></svg>
+
+    //- scripts
+    <script src="../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+    script(src="../js/scripts.js")
