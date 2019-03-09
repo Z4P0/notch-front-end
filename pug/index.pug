@@ -13,16 +13,52 @@ html(lang="en").no-js
 
       header.flex.top-bar
         .start
-          select
+          select.topics-dropdown
             option(value="all") All
         .middle
           a(href="#") Favorites
+          a(href="#") Tags
         .end
           button#new-post-button(type="button").button--new-post
             span Make a new post
 
 
       main#main-content
+        .topics-drawer
+          h2.show-for-sr Topics List
+
+          ul.topics-list
+            li.card.card--topic-current
+              span.current-topic-label Current
+              h3.card-title Photography
+              p.topic__meta May 2018 - 001
+              span.topic__post-amount 7 posts
+            li.card.card--topic
+              h3.card-title C4D
+              p.topic__meta April 2018 - 001
+              span.topic__post-amount 30 posts
+            li.card.card--topic
+              h3.card-title Illustration
+              p.topic__meta March 2018 - 001
+              span.topic__post-amount 31 posts
+            li.card.card--topic
+              h3.card-title Aquascaping
+              p.topic__meta February 2018 - 001
+              span.topic__post-amount 28 posts
+            li.card.card--topic
+              h3.card-title Feng Shui
+              p.topic__meta January 2018 - 001
+              span.topic__post-amount 31 posts
+            li.card.card--topic
+              h3.card-title Pescatarianism
+              p.topic__meta December 2017 - 001
+              span.topic__post-amount 31 posts
+            li.card.card--topic
+              h3.card-title Processing
+              p.topic__meta November 2017 - 001
+              span.topic__post-amount 30 posts
+
+
 
         //- h2 New Post
         #new-post-modal.modal.hide

@@ -64,8 +64,6 @@ button {
 
 .flex {
   display: flex; }
-  .flex .end {
-    margin-left: auto; }
 
 .section {
   padding-top: 2rem;
@@ -93,7 +91,15 @@ button {
   column-count: 2; }
 
 .top-bar {
-  border-bottom: 1px solid #a0a0a0; }
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #a0a0a0;
+  align-items: center;
+  justify-content: space-between; }
+  .top-bar a {
+    text-decoration: none;
+    margin: auto 0.5rem; }
 
 .lead {
   font-size: 1.5rem;
@@ -295,3 +301,85 @@ button {
 
 .hide {
   display: none; }
+
+.topics-dropdown {
+  width: 30vw;
+  max-width: 242px; }
+
+#main-content {
+  display: grid;
+  grid-template-columns: 242px auto; }
+
+.topics-drawer {
+  background-color: #1f1e1a;
+  color: #fff;
+  padding: 0.75rem; }
+
+.topics-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+
+.card {
+  border-radius: 5px;
+  padding: 14px;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column-reverse; }
+
+.card--topic {
+  background-color: #33312b;
+  color: #fff; }
+
+.card--topic-current {
+  background-color: #fff;
+  color: #33312b;
+  position: relative; }
+  .card--topic-current .topic__post-amount {
+    color: #9b9e9e; }
+
+.current-topic-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffeb3e;
+  color: #33312b;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  padding: 7px 10px;
+  border-radius: 5px; }
+  .current-topic-label:before, .current-topic-label:after {
+    content: "\0a0";
+    background-color: #ffeb3e;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    position: absolute; }
+  .current-topic-label:before {
+    bottom: 0;
+    left: 0; }
+  .current-topic-label:after {
+    top: 0;
+    right: 0; }
+
+.card-title {
+  font-weight: 500;
+  margin-bottom: 0; }
+
+.current-topic-label,
+.topic__meta,
+.topic__post-amount {
+  font-family: 'Roboto Mono';
+  text-transform: uppercase; }
+
+.topic__meta {
+  font-size: 12px;
+  color: #9b9e9e;
+  margin-bottom: 10px; }
+
+.topic__post-amount {
+  font-size: 10px;
+  color: #fff;
+  margin-bottom: 16px;
+  text-align: right; }

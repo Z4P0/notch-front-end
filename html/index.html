@@ -12,16 +12,49 @@
     <div class="container">
       <header class="flex top-bar">
         <div class="start">
-          <select>
+          <select class="topics-dropdown">
             <option value="all">All</option>
           </select>
         </div>
-        <div class="middle"><a href="#">Favorites</a></div>
+        <div class="middle"><a href="#">Favorites</a><a href="#">Tags</a></div>
         <div class="end">
           <button class="button--new-post" id="new-post-button" type="button"><span>Make a new post</span></button>
         </div>
       </header>
       <main id="main-content">
+        <div class="topics-drawer">
+          <h2 class="show-for-sr">Topics List</h2>
+          <ul class="topics-list">
+            <li class="card card--topic-current"><span class="current-topic-label">Current</span>
+              <h3 class="card-title">Photography</h3>
+              <p class="topic__meta">May 2018 - 001</p><span class="topic__post-amount">7 posts</span>
+            </li>
+            <li class="card card--topic">
+              <h3 class="card-title">C4D</h3>
+              <p class="topic__meta">April 2018 - 001</p><span class="topic__post-amount">30 posts</span>
+            </li>
+            <li class="card card--topic">
+              <h3 class="card-title">Illustration</h3>
+              <p class="topic__meta">March 2018 - 001</p><span class="topic__post-amount">31 posts</span>
+            </li>
+            <li class="card card--topic">
+              <h3 class="card-title">Aquascaping</h3>
+              <p class="topic__meta">February 2018 - 001</p><span class="topic__post-amount">28 posts</span>
+            </li>
+            <li class="card card--topic">
+              <h3 class="card-title">Feng Shui</h3>
+              <p class="topic__meta">January 2018 - 001</p><span class="topic__post-amount">31 posts</span>
+            </li>
+            <li class="card card--topic">
+              <h3 class="card-title">Pescatarianism</h3>
+              <p class="topic__meta">December 2017 - 001</p><span class="topic__post-amount">31 posts</span>
+            </li>
+            <li class="card card--topic">
+              <h3 class="card-title">Processing</h3>
+              <p class="topic__meta">November 2017 - 001</p><span class="topic__post-amount">30 posts</span>
+            </li>
+          </ul>
+        </div>
         <div class="modal hide" id="new-post-modal">
           <div class="modal__content">
             <div class="actions">
