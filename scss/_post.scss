@@ -1,4 +1,59 @@
 $grey: #999e9e;
+$content-max-width: 625px;
+
+
+.post {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figcaption {
+    max-width: $content-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    line-height: 1.083;
+    max-width: 620px;
+    padding-right: 1.25rem;
+    margin: 32px auto 68px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2px;
+    margin-bottom: 22px;
+  }
+
+  p {
+    margin-bottom: 28px;
+  }
+
+  figcaption {
+    font-size: .8125rem;
+    color: $grey;
+    margin-top: 8px;
+    margin-bottom: 49px;
+  }
+
+  footer {
+    &:before {
+      content: "—";
+      display: block;
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.container-625 {
+  max-width: $content-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .category {
   color: $grey;
@@ -25,65 +80,33 @@ $grey: #999e9e;
   margin: 4rem auto 2rem;
 }
 
-h1 {
-  font-size: 4.5rem;
-  line-height: 1.083;
-  max-width: 620px;
-  padding-right: 1.25rem;
-  margin: 2rem auto;
-}
-
-h2 {
-  font-size: 1.5rem;
-  letter-spacing: 0.2px;
-  margin-bottom: 16px;
-}
-
-p {
-  margin-bottom: 28px;
-}
-
-$content-max-width: 625px;
-h2,
-h3,
-h4,
-h5,
-h6,
-figcaption,
-p {
-  max-width: $content-max-width;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container-625 {
-  max-width: $content-max-width;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-figcaption {
-  font-size: .8125rem;
-  color: $grey;
-  margin-top: 12px;
-  margin-bottom: 50px;
-}
 
 .tags-list {
   color: $grey;
-  list-style: none;
-  margin-left: 0;
-  margin-bottom: 50px;
   font-size: .75rem;
   letter-spacing: 1.6px;
+  list-style: none;
+  margin-bottom: 50px;
+  padding-left: 0;
   li {
     display: inline-block;
+    margin-right: 0.5rem;
+    &:after {
+      content: ",";
+    }
+    &:last-child:after {
+      content: none;
+    }
   }
   a {
     color: inherit;
     font-family: "Roboto Mono", Courier, monospace;
-    text-transform: uppercase;
     text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity .3s ease;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
   }
 }

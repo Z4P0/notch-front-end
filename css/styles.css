@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box; }
 
@@ -64,6 +65,48 @@ button {
 .f-jc {
   justify-content: space-between; }
 
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6,
+.post p,
+.post figcaption {
+  max-width: 625px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.post h1 {
+  font-size: 4.5rem;
+  line-height: 1.083;
+  max-width: 620px;
+  padding-right: 1.25rem;
+  margin: 32px auto 68px; }
+
+.post h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.2px;
+  margin-bottom: 22px; }
+
+.post p {
+  margin-bottom: 28px; }
+
+.post figcaption {
+  font-size: .8125rem;
+  color: #999e9e;
+  margin-top: 8px;
+  margin-bottom: 49px; }
+
+.post footer:before {
+  content: "—";
+  display: block;
+  margin-bottom: 22px; }
+
+.container-625 {
+  max-width: 625px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .category {
   color: #999e9e;
   display: inline-block;
@@ -85,54 +128,26 @@ button {
   max-width: 620px;
   margin: 4rem auto 2rem; }
 
-h1 {
-  font-size: 4.5rem;
-  line-height: 1.083;
-  max-width: 620px;
-  padding-right: 1.25rem;
-  margin: 2rem auto; }
-
-h2 {
-  font-size: 1.5rem;
-  letter-spacing: 0.2px;
-  margin-bottom: 16px; }
-
-p {
-  margin-bottom: 28px; }
-
-h2,
-h3,
-h4,
-h5,
-h6,
-figcaption,
-p {
-  max-width: 625px;
-  margin-left: auto;
-  margin-right: auto; }
-
-.container-625 {
-  max-width: 625px;
-  margin-left: auto;
-  margin-right: auto; }
-
-figcaption {
-  font-size: .8125rem;
-  color: #999e9e;
-  margin-top: 12px;
-  margin-bottom: 50px; }
-
 .tags-list {
   color: #999e9e;
-  list-style: none;
-  margin-left: 0;
-  margin-bottom: 50px;
   font-size: .75rem;
-  letter-spacing: 1.6px; }
+  letter-spacing: 1.6px;
+  list-style: none;
+  margin-bottom: 50px;
+  padding-left: 0; }
   .tags-list li {
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 0.5rem; }
+    .tags-list li:after {
+      content: ","; }
+    .tags-list li:last-child:after {
+      content: none; }
   .tags-list a {
     color: inherit;
     font-family: "Roboto Mono", Courier, monospace;
+    text-decoration: none;
     text-transform: uppercase;
-    text-decoration: none; }
+    transition: opacity .3s ease;
+    opacity: 0.7; }
+    .tags-list a:hover {
+      opacity: 1; }
