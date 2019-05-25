@@ -1,0 +1,89 @@
+$grey: #999e9e;
+
+.category {
+  color: $grey;
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 1.6px;
+  line-height: 2.333;
+  text-transform: uppercase;
+  > strong {
+    color: #1f1e1a;
+  }
+}
+
+.date {
+  color: $grey;
+  display: inline-block;
+  font-family: "Roboto Mono", Courier, monospace;
+  font-size: 0.75rem;
+  line-height: 2.333;
+}
+
+.meta {
+  max-width: 620px;
+  margin: 4rem auto 2rem;
+}
+
+h1 {
+  font-size: 4.5rem;
+  line-height: 1.083;
+  max-width: 620px;
+  padding-right: 1.25rem;
+  margin: 2rem auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.2px;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 28px;
+}
+
+$content-max-width: 625px;
+h2,
+h3,
+h4,
+h5,
+h6,
+figcaption,
+p {
+  max-width: $content-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-625 {
+  max-width: $content-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+figcaption {
+  font-size: .8125rem;
+  color: $grey;
+  margin-top: 12px;
+  margin-bottom: 50px;
+}
+
+.tags-list {
+  color: $grey;
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 50px;
+  font-size: .75rem;
+  letter-spacing: 1.6px;
+  li {
+    display: inline-block;
+  }
+  a {
+    color: inherit;
+    font-family: "Roboto Mono", Courier, monospace;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
