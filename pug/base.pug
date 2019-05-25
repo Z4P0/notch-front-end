@@ -1,0 +1,22 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    block title
+      title Page title
+    meta(name="description", content="Page description")
+    link(rel="stylesheet", href="../css/styles.css")
+    //- required scripts
+    <script src="../node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+    script(src="../js/scripts.js")
+  body
+    .container
+      block body
+        header
+          h1 Anvil
+        main#main-content
+          h2 Page Content
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et voluptate a impedit quaerat unde accusamus maiores illum alias corporis id dolore vero iusto, harum, odit! Necessitatibus reiciendis dolore sint.
+    //- secondary scripts
