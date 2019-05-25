@@ -18,18 +18,18 @@
   "author": "Luis Rosario",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.3.1",
+    "autoprefixer": "^9.5.1",
     "css-mqpacker": "^7.0.0",
-    "cssnano": "^4.1.7",
+    "cssnano": "^4.1.10",
     "http-server": "^0.11.1",
-    "live-server": "^1.2.0",
-    "node-sass": "^4.10.0",
-    "postcss-cli": "^6.0.1",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^11.1.1",
-    "@ckeditor/ckeditor5-build-inline": "^11.1.1"
+    "@ckeditor/ckeditor5-build-classic": "^12.1.0",
+    "@ckeditor/ckeditor5-build-inline": "^12.1.0"
   }
 }
