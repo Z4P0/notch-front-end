@@ -34,3 +34,30 @@
   margin: auto;
   writing-mode: sideways-lr;
 }
+
+.app-bar-content {
+  position: absolute;
+  left: 100%;
+}
+
+.category-list {
+  background-color: #1f1e1a;
+  padding: 0 1rem;
+  > li {
+    background-color: #302f2d;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 1rem;
+    padding:  0.75rem 1rem 1rem;
+    width: 287px;
+  }
+  h2 {
+    color: inherit;
+  }
+}
+
+.category-list__title {
+  margin-bottom: 0;
+}
