@@ -71,7 +71,6 @@ button {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
-  background-color: transparent;
   border: none; }
   input[type="submit"]::-moz-focus-inner,
   input[type="reset"]::-moz-focus-inner,
