@@ -1,0 +1,51 @@
+// Form styles
+// ----------------------------------------
+label {
+  display: block;
+  font-size: .625rem;
+  font-weight: 600;
+  letter-spacing: .9px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+
+input,
+select,
+button,
+textarea {
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+input,
+button,
+textarea {
+  border: 1px solid $grey;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.18px;
+  // button reset
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}

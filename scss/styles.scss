@@ -1,3 +1,7 @@
+$yellow: #ffda48;
+$grey: #d6d6d6;
+
+
 html {
   box-sizing: border-box;
 }
@@ -41,24 +45,15 @@ figure img {
   display: block;
 }
 
-
-button {
-  // button reset
-  font-family: inherit;
-  font-size: inherit;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
-}
+@import "forms";
 
 hr {
   opacity: .3;
 }
 
+
+// Layout
+// ----------------------------------------
 .spacer {
   margin-bottom: 4rem;
 }
@@ -68,6 +63,12 @@ hr {
 }
 .f-jc {
   justify-content: space-between;
+}
+
+
+
+.button {
+  background-color: $yellow;
 }
 
 
