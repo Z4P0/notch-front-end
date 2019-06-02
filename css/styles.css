@@ -25,36 +25,27 @@ h1, h2, h3, h4, h5, h6,
 p, ul, ol {
   margin-top: 0; }
 
-img {
-  max-width: 100%; }
-
 figure {
   margin: 0; }
 
+img {
+  max-width: 100%; }
+
 figure img {
   display: block; }
-
-input {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  font-size: 1rem;
-  padding: 0.25rem 0.5rem;
-  margin-bottom: 1rem; }
 
 button {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
   background-color: transparent;
-  border: none;
-  text-transform: uppercase;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.2em; }
+  border: none; }
   button::-moz-focus-inner {
     border: 0;
     padding: 0; }
+
+hr {
+  opacity: .3; }
 
 .spacer {
   margin-bottom: 4rem; }
@@ -151,3 +142,50 @@ button {
     opacity: 0.7; }
     .tags-list a:hover {
       opacity: 1; }
+
+.post-form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 871px;
+  padding: 66px 78px 75px; }
+  .post-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 34px; }
+
+label {
+  display: block;
+  font-size: .625rem;
+  font-weight: 600;
+  letter-spacing: .9px;
+  margin-bottom: 6px;
+  text-transform: uppercase; }
+
+input,
+select,
+button,
+textarea {
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 24px;
+  width: 100%; }
+
+input,
+button,
+textarea {
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  padding: 8px 12px; }
+
+.button {
+  background-color: #ffda48; }
+
+input[type="submit"],
+input[type="reset"],
+button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.18px; }

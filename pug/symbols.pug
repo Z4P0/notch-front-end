@@ -44,3 +44,70 @@ block body
           a(href="#") #Sunset
         li
           a(href="#") #Silhouette
+
+  .spacer
+
+  h2 Category Post
+  hr
+  form.post-form(action="#")
+    h3 20 April 2019
+
+    .flex.f-jc
+      div
+        label(for="category") Category
+        select#category
+          option(value="1") Photography
+          option(value="2") Lorem
+          option(value="2") Ipsum
+      div
+        label(for="chapter") Chapter
+        select#chapter
+          option(value="1") 001
+          option(value="2") Lorem
+          option(value="2") Ipsum
+      div
+        label(for="month") Month
+        select#month
+          option(value="1") May
+          option(value="2") June
+          option(value="2") July
+    div
+      label(for="category-description") Category Description
+      textarea#category-description(rows="4") Chapter 001 for Photography will be focused exclusively on film photography. This is my first time with film, so I’ll be learning the ins and the outs of the process of development as well as how to use the camera.
+    div
+      label(for="post-content") Post
+      textarea#post-content(rows="8")
+    div
+      input(type="text", placeholder="#tags")
+    div.flex.f-jc
+      div
+        input(type="reset", value="Close")
+      //- div
+        button(type="button") Button
+      div
+        input(type="submit", value="Submit").button
+
+
+  .spacer
+
+  h2 Date Post
+  hr
+  form.post-form(action="#")
+    h3 20 April 2019
+
+    div
+      label(for="post-content") Post
+      //- textarea#post-title(rows="1", placeholder="Title")
+      input(type="text", placeholder="text")
+      textarea#post-content(rows="8", placeholder="Text goes here")
+
+    div
+      input(type="text", placeholder="#tags")
+
+    div.flex.f-jc
+      div
+        input(type="reset", value="Close")
+      //- div
+        button(type="button") Button
+      div
+        input(type="submit", value="Submit").button

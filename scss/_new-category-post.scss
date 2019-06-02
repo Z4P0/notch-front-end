@@ -1,0 +1,58 @@
+$yellow: #ffda48;
+
+.post-form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 871px;
+  padding: 66px 78px 75px;
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 34px;
+  }
+}
+
+
+label {
+  display: block;
+  font-size: .625rem;
+  font-weight: 600;
+  letter-spacing: .9px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+
+input,
+select,
+button,
+textarea {
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+input,
+button,
+textarea {
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+
+.button {
+  background-color: $yellow;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.18px;
+}
