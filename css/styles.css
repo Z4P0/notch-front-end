@@ -244,7 +244,8 @@ hr {
 
 .category-list {
   background-color: #1f1e1a;
-  padding: 0 1rem; }
+  padding: 1rem;
+  margin: 0; }
   .category-list > li {
     background-color: #302f2d;
     border-radius: 5px;
@@ -254,8 +255,31 @@ hr {
     margin-bottom: 1rem;
     padding: 0.75rem 1rem 1rem;
     width: 287px; }
+    .category-list > li:last-child {
+      margin-bottom: 0; }
   .category-list h2 {
     color: inherit; }
 
 .category-list__title {
   margin-bottom: 0; }
+
+.category-list__date {
+  color: #999999;
+  font-family: "Roboto Mono";
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  margin-bottom: 0;
+  text-transform: uppercase; }
+
+.category-list__meta {
+  font-family: "Roboto Mono";
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: end; }
+
+.category-list__extras {
+  background-color: transparent;
+  padding: 0 0 0 13px;
+  margin: 0 0 0 5px;
+  width: auto; }
