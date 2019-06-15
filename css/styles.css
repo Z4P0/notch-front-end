@@ -239,24 +239,30 @@ hr {
   writing-mode: sideways-lr; }
 
 .app-bar-content {
+  background-color: #1f1e1a;
+  bottom: 0;
+  left: 100%;
   position: absolute;
-  left: 100%; }
+  top: 0; }
 
 .category-list {
-  background-color: #1f1e1a;
   padding: 1rem;
   margin: 0; }
   .category-list > li {
-    background-color: #302f2d;
+    background-color: #292825;
     border-radius: 5px;
     color: #fff;
+    cursor: pointer;
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 1rem;
     padding: 0.75rem 1rem 1rem;
+    transition: background-color .3s ease;
     width: 287px; }
     .category-list > li:last-child {
       margin-bottom: 0; }
+    .category-list > li:hover {
+      background-color: #302f2d; }
   .category-list h2 {
     color: inherit; }
 
@@ -283,6 +289,29 @@ hr {
   padding: 0 0 0 13px;
   margin: 0 0 0 5px;
   width: auto; }
+
+.category-list .most-recent {
+  background-color: #fff;
+  color: #1f1e1a;
+  position: relative; }
+  .category-list .most-recent:before {
+    background-color: #ffda48;
+    border-radius: 5px 0 10px 0;
+    content: "Most Recent";
+    display: inline-block;
+    font-family: "Roboto Mono";
+    font-weight: bold;
+    font-size: .5625rem;
+    left: 0;
+    letter-spacing: .63px;
+    padding: 4px 9px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0; }
+  .category-list .most-recent .category-list__meta,
+  .category-list .most-recent .category-list__extras g {
+    color: #9b9e9e;
+    fill: #9b9e9e; }
 
 .app-bar__filter {
   background-color: #1f1e1a;
@@ -353,7 +382,8 @@ hr {
 
 /* Set options to normal weight */
 .select-css option {
-  font-weight: normal; }
+  font-weight: normal;
+  font-size: 1rem; }
 
 /* Support for rtl text, explicit support for Arabic and Hebrew */
 *[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
