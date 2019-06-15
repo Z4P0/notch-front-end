@@ -38,91 +38,20 @@
 .app-bar-content {
   background-color: #1f1e1a;
   bottom: 0;
+  color: #fff;
   left: 100%;
   position: absolute;
   top: 0;
-}
-
-.category-list {
-  padding: 1rem;
-  margin: 0;
-  > li {
-    background-color: #292825;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column-reverse;
-    margin-bottom: 1rem;
-    padding:  0.75rem 1rem 1rem;
-    transition: background-color .3s ease;
-    width: 287px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    &:hover {
-      background-color: #302f2d;
-    }
-  }
-  h2 {
+  width: 336px;
+  h2, h3, h4,
+  button {
     color: inherit;
   }
-}
-
-.category-list__title {
-  margin-bottom: 0;
-}
-
-.category-list__date {
-  color: #999999;
-  font-family: "Roboto Mono";
-  font-size: 0.75rem;
-  letter-spacing: 0.3px;
-  margin-bottom: 0;
-  text-transform: uppercase;
-}
-
-.category-list__meta {
-  font-family: "Roboto Mono";
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: end;
-}
-
-.category-list__extras {
-  background-color: transparent;
-  padding: 0 0 0 13px;
-  margin: 0 0 0 5px;
-  width: auto;
-}
-
-.category-list .most-recent {
-  background-color: #fff;
-  color: #1f1e1a;
-  position: relative;
-  &:before {
-    background-color: #ffda48;
-    border-radius: 5px 0 10px 0;
-    content: "Most Recent";
-    display: inline-block;
-    font-family: "Roboto Mono";
-    font-weight: bold;
-    font-size: .5625rem;
-    left: 0;
-    letter-spacing: .63px;
-    padding: 4px 9px;
-    position: absolute;
-    text-transform: uppercase;
-    top: 0;
-  }
-  .category-list__meta,
-  .category-list__extras g {
-    color: #9b9e9e;
-    fill: #9b9e9e;
+  button {
+    background-color: transparent;
+    margin-bottom: 0;
   }
 }
-
 
 
 
@@ -224,4 +153,154 @@
 
 .select-css:disabled:hover, .select-css[aria-disabled=true] {
   border-color: #aaa;
+}
+
+
+
+
+
+// ----------------------------------------
+// TEMPORARY
+// ----------------------------------------
+.app-bar-content .app-bar-content {
+  overflow: scroll;
+}
+// ----------------------------------------
+
+
+// ==================================================
+// Buckets
+
+.category-bucket-header {
+  padding: 110px 21px 20px;
+  .bucket-title {
+    margin-bottom: 0;
+  }
+}
+
+.bucket-title {
+  font-size: 1.625rem;
+}
+
+.thumbnail {
+  background-color: #24231e;
+  height: 80px;
+  width: 80px;
+}
+
+.content-meta {
+  font-family: "Roboto Mono";
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #999999;
+}
+
+
+
+// LIST
+// ==================================================
+
+.list {
+  list-style: none;
+  margin: 0;
+  > li {
+    cursor: pointer;
+    transition: background-color .3s ease;
+  }
+}
+
+.list__content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.list--root-buckets {
+  padding: 1rem;
+  > li {
+    background-color: #292825;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 1rem;
+    padding:  0.75rem 1rem 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      background-color: #302f2d;
+    }
+  }
+}
+
+.category-list__title {
+  margin-bottom: 0;
+}
+
+
+.category-list__date {
+  letter-spacing: 0.3px;
+  margin-bottom: 0;
+}
+
+.category-list__meta {
+  display: flex;
+  justify-content: end;
+}
+
+.category-list__extras {
+  background-color: transparent;
+  padding: 0 0 0 13px;
+  margin: 0 0 0 5px;
+  width: auto;
+}
+
+.list--root-buckets .most-recent {
+  background-color: #fff;
+  color: #1f1e1a;
+  position: relative;
+  &:hover {
+    background-color: #fff;
+  }
+  &:before {
+    background-color: #ffda48;
+    border-radius: 5px 0 10px 0;
+    content: "Most Recent";
+    display: inline-block;
+    font-family: "Roboto Mono";
+    font-weight: bold;
+    font-size: .5625rem;
+    left: 0;
+    letter-spacing: .63px;
+    padding: 4px 9px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+  }
+  .category-list__meta,
+  .category-list__extras g {
+    color: #9b9e9e;
+    fill: #9b9e9e;
+  }
+}
+
+
+
+.list--category-posts {
+  padding: 0;
+  > li {
+    border: 1px solid #0d0c0b;
+    display: flex;
+    padding: 16px 21px;
+    &:hover {
+      background-color: #292825;
+    }
+  }
+  h4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+  .thumbnail {
+    margin-right: 17px;
+  }
 }
