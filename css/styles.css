@@ -64,8 +64,8 @@ textarea {
 input[type="submit"],
 input[type="reset"],
 button {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 32px;
+  padding-right: 32px;
   font-size: 1.25rem;
   letter-spacing: 0.18px;
   font-family: inherit;
@@ -256,17 +256,18 @@ hr {
     background-color: transparent;
     margin-bottom: 0; }
 
-.app-bar__filter {
-  background-color: #1f1e1a;
+.app-bar__navigation {
+  background-color: #292825;
   display: flex;
   height: 56px; }
-
-.app-bar__filter__button {
-  background-color: #292825;
-  border-radius: 0;
-  height: 56px;
-  margin: 0;
-  width: 56px; }
+  .app-bar__navigation button {
+    border-radius: 0;
+    padding: initial;
+    width: 56px; }
+    .app-bar__navigation button:first-child {
+      border-right: 1px solid #1f1e1a; }
+    .app-bar__navigation button:nth-child(2) {
+      margin-left: auto; }
 
 .app-bar__filter__dropdown {
   margin-bottom: 0; }
@@ -348,6 +349,9 @@ hr {
   padding: 110px 21px 20px; }
   .category-bucket-header .bucket-title {
     margin-bottom: 0; }
+    .category-bucket-header .bucket-title + p {
+      margin-bottom: 0;
+      padding-top: 7px; }
 
 .bucket-title {
   font-size: 1.625rem; }
@@ -444,5 +448,3 @@ hr {
     line-height: 1.125rem; }
   .list--category-posts .thumbnail {
     margin-right: 17px; }
-
-/*# sourceMappingURL=styles.css.map */

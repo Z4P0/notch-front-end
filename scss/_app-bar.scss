@@ -55,19 +55,31 @@
 
 
 
-.app-bar__filter {
-  background-color: #1f1e1a;
+.app-bar__navigation {
+  background-color: #292825;
   display: flex;
   height: 56px;
+  button {
+    border-radius: 0;
+    padding: initial;
+    width: 56px;
+    &:first-child {
+      border-right: 1px solid #1f1e1a;
+    }
+    &:nth-child(2) {
+      margin-left: auto;
+    }
+  }
 }
 
-.app-bar__filter__button {
-  background-color: #292825;
-  border-radius: 0;
-  height: 56px;
-  margin: 0;
-  width: 56px;
-}
+
+// .app-bar__filter__button {
+//   background-color: #292825;
+//   border-radius: 0;
+//   height: 56px;
+//   margin: 0;
+//   width: 56px;
+// }
 
 .app-bar__filter__dropdown {
   margin-bottom: 0;
@@ -175,6 +187,10 @@
   padding: 110px 21px 20px;
   .bucket-title {
     margin-bottom: 0;
+    + p {
+      margin-bottom: 0;
+      padding-top: 7px;
+    }
   }
 }
 
