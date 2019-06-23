@@ -402,7 +402,31 @@ hr {
 
 .category-list__meta {
   display: flex;
-  justify-content: end; }
+  justify-content: end;
+  position: relative; }
+  .category-list__meta ul {
+    background-color: #1f1e1a;
+    border: 1px solid #0d0c0b;
+    border-radius: 4px;
+    list-style: none;
+    padding: 9px 0;
+    position: absolute;
+    top: 25px;
+    right: -10px;
+    width: 115px; }
+    .category-list__meta ul li {
+      transition: background-color 0.3s ease; }
+      .category-list__meta ul li:hover {
+        background-color: #292825; }
+    .category-list__meta ul a {
+      display: block;
+      color: #fff;
+      font-family: "ATC Arquette";
+      font-size: 1rem;
+      line-height: 2rem;
+      padding: 0 18px;
+      text-decoration: none;
+      text-transform: none; }
 
 .category-list__extras {
   background-color: transparent;

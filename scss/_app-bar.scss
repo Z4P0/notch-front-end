@@ -262,6 +262,34 @@
 .category-list__meta {
   display: flex;
   justify-content: end;
+  position: relative;
+  ul {
+    background-color: #1f1e1a;
+    border: 1px solid #0d0c0b;
+    border-radius: 4px;
+    list-style: none;
+    padding: 9px 0;
+    position: absolute;
+    top: 25px;
+    right: -10px;
+    width: 115px;
+    li {
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: #292825;
+      }
+    }
+    a {
+      display: block;
+      color: $white;
+      font-family: $sans-serif;
+      font-size: 1rem;
+      line-height: 2rem;
+      padding: 0 18px;
+      text-decoration: none;
+      text-transform: none;
+    }
+  }
 }
 
 .category-list__extras {
