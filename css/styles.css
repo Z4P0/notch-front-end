@@ -81,6 +81,11 @@ button {
 hr {
   opacity: .3; }
 
+kbd {
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  padding: 3px 9px; }
+
 .spacer {
   margin-bottom: 4rem; }
 
@@ -472,3 +477,27 @@ hr {
     line-height: 1.125rem; }
   .list--category-posts .thumbnail {
     margin-right: 17px; }
+
+.app-bar__keyboard-shortcuts {
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  left: 54px;
+  margin-bottom: 24px;
+  padding: 0 20px;
+  position: absolute;
+  width: 359px; }
+  .app-bar__keyboard-shortcuts dt, .app-bar__keyboard-shortcuts dd {
+    border-bottom: 1px solid #e8e8e8;
+    flex: 50%;
+    line-height: 3.25rem; }
+    .app-bar__keyboard-shortcuts dt:last-child, .app-bar__keyboard-shortcuts dd:last-child {
+      border-bottom: none; }
+  .app-bar__keyboard-shortcuts dt {
+    font-weight: 500; }
+  .app-bar__keyboard-shortcuts dd {
+    margin-left: 0; }
