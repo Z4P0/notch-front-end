@@ -481,6 +481,43 @@ kbd {
   .list--category-posts .thumbnail {
     margin-right: 17px; }
 
+.list--categories-list {
+  padding-left: 16px;
+  padding-right: 16px; }
+  .list--categories-list ul {
+    padding-left: 0; }
+  .list--categories-list li {
+    margin-bottom: 7px; }
+    .list--categories-list li li {
+      align-items: center;
+      background-color: #292825;
+      border-radius: 5px;
+      display: flex;
+      height: 44px;
+      justify-content: space-between;
+      padding: 4px 19px; }
+      .list--categories-list li li:hover {
+        background-color: #302f2d; }
+      .list--categories-list li li.selected {
+        background-color: #ffe448;
+        color: #1f1e1a; }
+  .list--categories-list strong {
+    color: #656565;
+    display: block;
+    font-size: .5625rem;
+    font-weight: 500;
+    line-height: 15px;
+    margin-bottom: 4px;
+    padding-left: 20px; }
+  .list--categories-list span {
+    font-weight: 600;
+    font-size: 0.75rem; }
+    .list--categories-list span:nth-child(2) {
+      font-family: "Roboto Mono";
+      font-size: 1.375rem;
+      font-weight: normal;
+      color: #4a4945; }
+
 .app-bar__keyboard-shortcuts {
   align-items: stretch;
   background: #fff;
