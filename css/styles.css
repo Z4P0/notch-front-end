@@ -217,7 +217,7 @@ kbd {
   display: flex;
   border-right: 1px solid #e6e6e6;
   max-width: 4.25rem;
-  min-height: 100vh;
+  height: 100vh;
   position: relative; }
 
 .app-bar__button {
@@ -250,7 +250,9 @@ kbd {
   background-color: #1f1e1a;
   bottom: 0;
   color: #fff;
+  height: 100vh;
   left: 100%;
+  overflow: scroll;
   position: absolute;
   top: 0;
   width: 336px; }
@@ -264,7 +266,11 @@ kbd {
 .app-bar__navigation {
   background-color: #292825;
   display: flex;
-  height: 56px; }
+  height: 56px;
+  left: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100; }
   .app-bar__navigation button {
     border-radius: 0;
     padding: initial;
@@ -346,9 +352,6 @@ kbd {
 
 .select-css:disabled:hover, .select-css[aria-disabled=true] {
   border-color: #aaa; }
-
-.app-bar-content .app-bar-content {
-  overflow: scroll; }
 
 .category-bucket-header {
   padding: 110px 21px 20px; }

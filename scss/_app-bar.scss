@@ -2,7 +2,7 @@
   display: flex;
   border-right: 1px solid #e6e6e6;
   max-width: 4.25rem;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
 }
 .app-bar__button {
@@ -39,7 +39,9 @@
   background-color: #1f1e1a;
   bottom: 0;
   color: #fff;
+  height: 100vh;
   left: 100%;
+  overflow: scroll;
   position: absolute;
   top: 0;
   width: 336px;
@@ -59,6 +61,10 @@
   background-color: #292825;
   display: flex;
   height: 56px;
+  left: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   button {
     border-radius: 0;
     padding: initial;
@@ -72,14 +78,6 @@
   }
 }
 
-
-// .app-bar__filter__button {
-//   background-color: #292825;
-//   border-radius: 0;
-//   height: 56px;
-//   margin: 0;
-//   width: 56px;
-// }
 
 .app-bar__filter__dropdown {
   margin-bottom: 0;
@@ -167,17 +165,6 @@
   border-color: #aaa;
 }
 
-
-
-
-
-// ----------------------------------------
-// TEMPORARY
-// ----------------------------------------
-.app-bar-content .app-bar-content {
-  overflow: scroll;
-}
-// ----------------------------------------
 
 
 // ==================================================
@@ -370,7 +357,6 @@
   width: 359px;
   dt, dd {
     border-bottom: 1px solid #e8e8e8;
-    // flex-grow: 1;
     flex: 50%;
     line-height: 3.25rem;
     &:last-child {
@@ -379,7 +365,6 @@
   }
   dt {
     font-weight: 500;
-    // padding-right: 35px;
   }
   dd {
     margin-left: 0;
