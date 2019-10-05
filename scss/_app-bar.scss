@@ -4,6 +4,9 @@
   max-width: 4.25rem;
   height: 100vh;
   position: relative;
+  hr {
+    border-color: #0D0C0B;
+  }
 }
 .app-bar__button {
   background-color: transparent;
@@ -12,6 +15,7 @@
   position: absolute;
   right: 0;
   transition: opacity 0.3s ease;
+  width: 100%;
 }
 .menu-button {
   opacity: 0.8;
@@ -45,8 +49,7 @@
   position: absolute;
   top: 0;
   width: 336px;
-  h2, h3, h4,
-  button {
+  h2, h3, h4 {
     color: inherit;
   }
   button {

@@ -51,8 +51,7 @@ textarea {
   font-family: inherit;
   font-size: 1rem;
   line-height: 1.75;
-  margin-bottom: 24px;
-  width: 100%; }
+  margin-bottom: 24px; }
 
 input,
 button,
@@ -92,14 +91,31 @@ kbd {
 .flex {
   display: flex; }
 
+.items-center {
+  align-items: center; }
+
+.justify-between {
+  justify-content: space-between; }
+
 .f-jc {
   justify-content: space-between; }
 
+.pv2 {
+  padding-top: 8px;
+  padding-bottom: 8px; }
+
+.ph3 {
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.pt3 {
+  padding-top: 16px; }
+
+.pb-2 {
+  padding-bottom: 8px; }
+
 .mb0 {
   margin-bottom: 0; }
-
-.button {
-  background-color: #ffda48; }
 
 .post h2,
 .post h3,
@@ -219,6 +235,8 @@ kbd {
   max-width: 4.25rem;
   height: 100vh;
   position: relative; }
+  .app-bar hr {
+    border-color: #0D0C0B; }
 
 .app-bar__button {
   background-color: transparent;
@@ -226,7 +244,8 @@ kbd {
   padding: 1rem 0;
   position: absolute;
   right: 0;
-  transition: opacity 0.3s ease; }
+  transition: opacity 0.3s ease;
+  width: 100%; }
 
 .menu-button {
   opacity: 0.8;
@@ -256,8 +275,7 @@ kbd {
   position: absolute;
   top: 0;
   width: 336px; }
-  .app-bar-content h2, .app-bar-content h3, .app-bar-content h4,
-  .app-bar-content button {
+  .app-bar-content h2, .app-bar-content h3, .app-bar-content h4 {
     color: inherit; }
   .app-bar-content button {
     background-color: transparent;
@@ -541,3 +559,25 @@ kbd {
     font-weight: 500; }
   .app-bar__keyboard-shortcuts dd {
     margin-left: 0; }
+
+.button {
+  background-color: #ffda48; }
+
+.title-1 {
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 13px;
+  color: #4F4D48;
+  letter-spacing: 0;
+  text-transform: uppercase; }
+
+.title-2 {
+  font-weight: 600;
+  font-size: 0.75rem; }
+
+.button-1 {
+  font-family: "Roboto Mono";
+  font-size: 12px;
+  color: #787875;
+  letter-spacing: 0;
+  padding: 8px; }
