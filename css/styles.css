@@ -100,6 +100,12 @@ kbd {
 .f-jc {
   justify-content: space-between; }
 
+.pa2 {
+  padding: 8px; }
+
+.pa3 {
+  padding: 16px; }
+
 .pv2 {
   padding-top: 8px;
   padding-bottom: 8px; }
@@ -111,7 +117,7 @@ kbd {
 .pt3 {
   padding-top: 16px; }
 
-.pb-2 {
+.pb2 {
   padding-bottom: 8px; }
 
 .mb0 {
@@ -581,3 +587,18 @@ kbd {
   color: #787875;
   letter-spacing: 0;
   padding: 8px; }
+
+.bg-grey-200 {
+  background-color: #292825; }
+
+.bg-grey-400 {
+  background-color: #1F1E1A; }
+
+.bg-grey-600 {
+  background-color: #141411; }
+
+.bg-grey-800 {
+  background-color: #080706; }
+
+.white {
+  color: #fff; }

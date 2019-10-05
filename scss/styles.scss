@@ -1,6 +1,12 @@
 $yellow: #ffda48;
 $grey: #d6d6d6;
 $white: #fff;
+
+$grey-200: #292825;
+$grey-400: #1F1E1A;
+$grey-600: #141411;
+$grey-800: #080706;
+
 $sans-serif: "ATC Arquette";
 $roboto: "Roboto Mono";
 $monospace: $roboto;
@@ -83,6 +89,8 @@ $size-3: 16px;
   justify-content: space-between;
 }
 
+.pa2 { padding: $size-2; }
+.pa3 { padding: $size-3; }
 .pv2 {
   padding-top: $size-2;
   padding-bottom: $size-2;
@@ -94,7 +102,7 @@ $size-3: 16px;
 .pt3 {
   padding-top: $size-3;
 }
-.pb-2 {
+.pb2 {
   padding-bottom: $size-2;
 }
 
@@ -136,4 +144,9 @@ $size-3: 16px;
   padding: 8px;
 }
 
+.bg-grey-200 { background-color: $grey-200; }
+.bg-grey-400 { background-color: $grey-400; }
+.bg-grey-600 { background-color: $grey-600; }
+.bg-grey-800 { background-color: $grey-800; }
 
+.white { color: $white; }
