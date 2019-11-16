@@ -1,0 +1,41 @@
+$size-2: 8px;
+$size-3: 16px;
+
+.spacer {
+  margin-bottom: 4rem;
+}
+
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+.f-jc {
+  justify-content: space-between;
+}
+
+.pa2 { padding: $size-2; }
+.pa3 { padding: $size-3; }
+.pv2 {
+  padding-top: $size-2;
+  padding-bottom: $size-2;
+}
+.ph3 {
+  padding-left: $size-3;
+  padding-right: $size-3;
+}
+.pt3 {
+  padding-top: $size-3;
+}
+.pb2 {
+  padding-bottom: $size-2;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}

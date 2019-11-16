@@ -1,0 +1,20 @@
+.title-1 {
+  font-family: $roboto;
+  font-weight: 500;
+  font-size: 13px;
+  color: #4F4D48;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.title-2 {
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+
+.bg-grey-200 { background-color: $grey-200; }
+.bg-grey-400 { background-color: $grey-400; }
+.bg-grey-600 { background-color: $grey-600; }
+.bg-grey-800 { background-color: $grey-800; }
+
+.white { color: $white; }

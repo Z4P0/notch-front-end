@@ -7,148 +7,27 @@
     <title>Page title</title>
     <meta name="description" content="Page description">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+      }
+      .container > div {
+        margin: auto;
+        text-align: center;
+      }
+      a {
+        margin-right: 1rem;
+      }
+      
+    </style>
   </head>
   <body>
     <div class="container">
-      <header class="flex top-bar">
-        <div class="start">
-          <select class="topics-dropdown">
-            <option value="all">All</option>
-          </select>
-        </div>
-        <div class="middle"><a href="#">Favorites</a><a href="#">Tags</a></div>
-        <div class="end">
-          <button class="button--new-post" id="new-post-button" type="button"><span>Make a new post</span></button>
-        </div>
-      </header>
-      <main id="main-content">
-        <div class="topics-drawer">
-          <h2 class="show-for-sr">Topics List</h2>
-          <ul class="topics-list">
-            <li class="card card--topic-current"><span class="current-topic-label">Current</span>
-              <h3 class="card-title">Photography</h3>
-              <p class="topic__meta">May 2018 - 001</p><span class="topic__post-amount">7 posts</span>
-            </li>
-            <li class="card card--topic">
-              <h3 class="card-title">C4D</h3>
-              <p class="topic__meta">April 2018 - 001</p><span class="topic__post-amount">30 posts</span>
-            </li>
-            <li class="card card--topic">
-              <h3 class="card-title">Illustration</h3>
-              <p class="topic__meta">March 2018 - 001</p><span class="topic__post-amount">31 posts</span>
-            </li>
-            <li class="card card--topic">
-              <h3 class="card-title">Aquascaping</h3>
-              <p class="topic__meta">February 2018 - 001</p><span class="topic__post-amount">28 posts</span>
-            </li>
-            <li class="card card--topic">
-              <h3 class="card-title">Feng Shui</h3>
-              <p class="topic__meta">January 2018 - 001</p><span class="topic__post-amount">31 posts</span>
-            </li>
-            <li class="card card--topic">
-              <h3 class="card-title">Pescatarianism</h3>
-              <p class="topic__meta">December 2017 - 001</p><span class="topic__post-amount">31 posts</span>
-            </li>
-            <li class="card card--topic">
-              <h3 class="card-title">Processing</h3>
-              <p class="topic__meta">November 2017 - 001</p><span class="topic__post-amount">30 posts</span>
-            </li>
-          </ul>
-        </div>
-        <div class="modal hide" id="new-post-modal">
-          <div class="modal__content">
-            <div class="actions">
-              <div class="new-content-modal__option">
-                <div class="new-content_modal__option__content">
-                  <div class="new-content-modal__option__icon-container"><img class="icon" src="../icons/new-topic-folder-icon.svg" alt="" width="62"><img class="shadow folder-shadow" src="../icons/new-topic-folder-shadow-icon.svg" alt="" width="62"></div>
-                  <button type="button">New Topic</button>
-                </div>
-              </div>
-              <div class="new-content-modal__option" id="new-post-modal--open-new-post-button">
-                <div class="new-content_modal__option__content">
-                  <div class="new-content-modal__option__icon-container"><img class="icon" src="../icons/new-post-paper-icon.svg" alt="" width="46"><img class="shadow paper-shadow" src="../icons/new-post-paper-shadow-icon.svg" alt="" width="46"></div>
-                  <button type="button">New Post</button>
-                </div>
-              </div>
-            </div>
-            <div class="actions">
-              <button class="button alternate cancel-button" type="button">Cancel</button>
-              <button class="button" type="button">Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg></button>
-            </div>
-            <button class="close-button" type="button" id="new-post-modal__close-buton">&times;</button>
-          </div>
-        </div>
-        <div class="modal hide" id="new-content-modal">
-          <div class="modal__content">
-            <h2 class="text-center">Add New Post</h2>
-            <form action="#">
-              <input type="text" placeholder="Enter title here">
-              <textarea id="post-content" rows="4"></textarea>
-              <input type="text" placeholder="Tags">
-            </form>
-            <div class="actions">
-              <button class="button cancel-button" type="button">Cancel</button>
-              <button class="button" type="button">Next <svg class="icon rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 91"><polygon points="45 0 0 0 45 91 90 0 45 0" fill="#33312b"/></svg></button>
-            </div>
-            <button class="close-button" type="button" id="close-button--new-content-modal">&times;</button>
-          </div>
-        </div>
-        <article class="post--with_notes section">
-          <div class="article-content">
-            <h1>The Alternative Culture Heritage of Hipsters</h1>
-            <div class="metadata">
-              <ul class="metadata--post_details_list">
-                <li><a href="#">PHOTOGRAPHY (001)</a></li>
-                <li><a href="#">05—15—2018</a></li>
-                <li><a href="#">#0203</a></li>
-              </ul>
-            </div>
-            <figure><img src="images/sample-img-1.jpg" alt=""></figure>
-            <p class="lead">Subtitle</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas posuere lectus dignissim, mattis neque in, maximus tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam non facilisis enim. Morbi nunc ipsum, pharetra et nisi id, viverra auctor lorem. Nunc vulputate neque at facilisis auctor.</p>
-            <p>Pellentesque mi augue, efficitur tempus ultrices eu, commodo quis felis. Morbi commodo volutpat odio, ut venenatis sapien pellentesque et. Proin posuere enim lorem, vel accumsan elit.</p>
-            <div class="metadata">
-              <ul class="metadata--tags_list">
-                <li><a href="#Pescatarianism">#Pescatarianism</a></li>
-                <li><a href="#May">#May</a></li>
-                <li><a href="#2018">#2018</a></li>
-                <li><a href="#0203">#0203</a></li>
-                <li><a href="#Part_002">#Part 002</a></li>
-                <li><a href="#Hipsters">#Hipsters</a></li>
-                <li><a href="#Alternative">#Alternative</a></li>
-                <li><a href="#Fish">#Fish</a></li>
-                <li><a href="#Diet">#Diet</a></li>
-                <li><a href="#Recipe">#Recipe</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="article-notes">
-            <div class="note">
-              <p><strong>(1) This is a Sticky Note.</strong> It’s where I can write out random notes, thoughts, ideas, blurbs, things to try, etc.</p>
-            </div>
-            <div class="note">
-              <p><strong>(2) The information could be presented in bullets</strong></p>
-              <ul>
-                <li>Like this</li>
-                <li>This</li>
-                <li>And this</li>
-              </ul>
-            </div>
-            <div class="note">
-              <p><strong>(3) Or numbers</strong></p>
-              <ol>
-                <li>Like this</li>
-                <li>This</li>
-                <li>Or this</li>
-              </ol>
-            </div>
-            <div class="note">
-              <p><strong>(4) It’s almost like annotation.</strong> I find myself doing this a lot in my sketches, so it makes sense to have a version of it in Notch too.</p>
-            </div>
-          </div>
-        </article>
-        <p><svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.36 93.55"><polygon points="49.18 0 64.38 30.79 98.36 35.73 73.77 59.7 79.58 93.55 49.18 77.57 18.79 93.55 24.59 59.7 0 35.73 33.98 30.79 49.18 0" fill="#ccc"/></svg></p>
-      </main>
+      <div>
+        <h1>Notch</h1><a href="components.html">Components</a><a href="post-page.html">Post Page</a>
+      </div>
     </div>
   </body>
 </html>
