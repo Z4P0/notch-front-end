@@ -1,0 +1,25 @@
+.keyboard-shortcuts {
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding: 0 20px;
+  width: 359px;
+  dt, dd {
+    border-bottom: 1px solid #e8e8e8;
+    flex: 50%;
+    line-height: 3.25rem;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  dt {
+    font-weight: 500;
+  }
+  dd {
+    margin-left: 0;
+  }
+}

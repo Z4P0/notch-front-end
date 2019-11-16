@@ -5,6 +5,10 @@
   padding-top: $size-2;
   padding-bottom: $size-2;
 }
+.pv3 {
+  padding-top: $size-3;
+  padding-bottom: $size-3;
+}
 .ph3 {
   padding-left: $size-3;
   padding-right: $size-3;
@@ -21,6 +25,13 @@
 }
 
 
+.monospace {
+  font-family: $monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #999999;
+}
+
 .title-1 {
   font-family: $roboto;
   font-weight: 500;
@@ -35,9 +46,23 @@
 }
 
 
+.bg-grey {
+  background-color: $grey;
+}
+.white {
+  color: $white;
+}
 .bg-grey-200 { background-color: $grey-200; }
 .bg-grey-400 { background-color: $grey-400; }
 .bg-grey-600 { background-color: $grey-600; }
 .bg-grey-800 { background-color: $grey-800; }
 
 .white { color: $white; }
+
+
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

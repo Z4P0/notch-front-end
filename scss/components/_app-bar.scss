@@ -55,36 +55,9 @@
 
 
 
-// Keyboard Shortcuts
+// Keyboard shortcuts, reveal
 // ==================================================
-.app-bar__keyboard-shortcuts {
-  align-items: stretch;
-  background: #fff;
-  border: 1px solid #e8e8e8;
-  border-radius: 4px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
-  padding: 0 20px;
-  width: 359px;
-  dt, dd {
-    border-bottom: 1px solid #e8e8e8;
-    flex: 50%;
-    line-height: 3.25rem;
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-  dt {
-    font-weight: 500;
-  }
-  dd {
-    margin-left: 0;
-  }
-}
-
-// when placed inside an app-bar it goes invisible by default
-.app-bar .app-bar__keyboard-shortcuts {
+.app-bar .keyboard-shortcuts {
   bottom: 0;
   left: 54px;
   opacity: 0;
@@ -109,7 +82,7 @@
 
 
 .app-nav {
-  background-color: #1f1e1a;
+  background-color: $grey-400;
   color: #fff;
   height: 100vh;
   overflow: scroll;
@@ -141,7 +114,7 @@
     padding: initial;
     width: 56px;
     &:first-child {
-      border-right: 1px solid #1f1e1a;
+      border-right: 1px solid $grey-400;
     }
     &:nth-child(2) {
       margin-left: auto;
@@ -176,7 +149,7 @@
   /* icon size, then gradient */
   background-size: .65rem auto, 100%;
   border: 1px solid #292825;
-  border-left: 1px solid #1f1e1a;
+  border-left: 1px solid $grey-400;
   border-radius: 0;
   box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
   box-sizing: border-box;
@@ -200,8 +173,8 @@
 /* Hover style */
 .select-css:hover {
   // border-color: #292825;
-  border-color: #1f1e1a;
-  // border-left: 1px solid #1f1e1a;
+  border-color: $grey-400;
+  // border-left: 1px solid $grey-400;
 }
 /* Focus style */
 .select-css:focus {
@@ -271,14 +244,6 @@
 
 
 
-// LIST
-// ==================================================
-
-.list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
 
 
@@ -293,7 +258,7 @@
   justify-content: end;
   position: relative;
   ul {
-    background-color: #1f1e1a;
+    background-color: $grey-400;
     border: 1px solid #0d0c0b;
     border-radius: 4px;
     list-style: none;
@@ -371,7 +336,7 @@
       }
       &.selected {
         background-color: #ffe448;
-        color: #1f1e1a;
+        color: $grey-400;
       }
     }
   }

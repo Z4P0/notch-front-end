@@ -212,7 +212,7 @@
             </ul>
           </nav>
           <button class="app-bar__button keyboard-button" onclick="showKeyboardShortcuts();" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16"><g fill="none" fill-rule="evenodd"><rect width="23" height="14" x="1" y="1" stroke="#1F1E1A" stroke-width="2" rx="2"/><rect width="1.994" height="1.994" x="4" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4.997" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="8.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="11.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="14.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="17.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4" y="10.024" fill="#1E1D19"/><rect width="11.056" height="1.994" x="6.992" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="7.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="10.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="13.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="16.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="4" fill="#1E1D19"/></g></svg><span class="show-for-sr">Keyboard Shortcuts</span></button>
-          <dl class="app-bar__keyboard-shortcuts" id="keyboard-shortcuts-list">
+          <dl class="keyboard-shortcuts" id="keyboard-shortcuts-list">
             <dt>New Category Post</dt>
             <dd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></dd>
             <dt>New Date Post</dt>
@@ -221,7 +221,7 @@
         </header>
         <div class="app-main row">
           <h3>Keyboard Shortcuts</h3>
-          <dl class="app-bar__keyboard-shortcuts">
+          <dl class="keyboard-shortcuts">
             <dt>New Category Post</dt>
             <dd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></dd>
             <dt>New Date Post</dt>
@@ -229,21 +229,34 @@
           </dl>
           <div class="spacer"></div>
           <h3>Category Card</h3>
-          <div class="category-card"><a href="#">
-              <p>April 2019 — 001</p>
-              <h3>C4D</h3></a>
-            <p class="category-card__extras">31 posts
-              <button type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg><span class="show-for-sr">More options</span></button>
-            </p>
-          </div>
-          <div class="category-card category-card--most-recent"><a href="#">
-              <p>April 2019 — 001</p>
-              <h3>C4D</h3></a>
-            <p class="category-card__extras">31 posts
-              <button type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg><span class="show-for-sr">More options</span></button>
-            </p>
+          <div class="row bg-grey-400 white pv3">
+            <div class="category-card"><a href="#">
+                <p>April 2019 — 001</p>
+                <h3>C4D</h3></a>
+              <p class="category-card__extras">31 posts
+                <button type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg><span class="show-for-sr">More options</span></button>
+              </p>
+            </div>
+            <div class="category-card category-card--most-recent"><a href="#">
+                <p>April 2019 — 001</p>
+                <h3>C4D</h3></a>
+              <p class="category-card__extras">31 posts
+                <button type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg><span class="show-for-sr">More options</span></button>
+              </p>
+            </div>
           </div>
           <div class="spacer"></div>
+          <h3>Post Card</h3>
+          <div class="post-card">
+            <figure class="thumbnail"><img src="../images/thumbnail-4.png" alt=""></figure>
+            <div class="list__content">
+              <h4 class="mb0">The philosophical argument for working less (and...</h4>
+              <p class="content-meta mb0">05.15.19</p>
+              <div class="content-meta category-list__meta"><span>#0203</span>
+                <button class="category-list__extras" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+              </div>
+            </div>
+          </div>
           <h3>Category Header</h3>
           <header class="category-bucket-header">
             <p class="content-meta mb0">May 2019 — 001</p>
