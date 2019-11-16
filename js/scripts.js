@@ -1,3 +1,13 @@
+// App bar
+// ==================================================
+// const keyboardShortcutsBtn = document.querySelector('#keyboard-shortcuts-toggle');
+
+function showKeyboardShortcuts() {
+  document.querySelector('#keyboard-shortcuts-list').classList.toggle('is-active');
+}
+
+
+/*
 ClassicEditor
     .create( document.querySelector( '#post-content' ) )
     .then( editor => {
@@ -31,3 +41,6 @@ document.querySelector('#new-post-modal__close-buton').addEventListener('click',
 document.querySelector('#close-button--new-content-modal').addEventListener('click', function(event) {
     $newContentModal.classList.toggle('hide');
 });
+*/
+
+

@@ -129,14 +129,46 @@ kbd {
 .menu-button {
   opacity: 0.8;
   top: 0; }
-  .menu-button:hover {
+  .menu-button:hover, .menu-button:focus {
     opacity: 1; }
 
 .keyboard-button {
   bottom: 0;
   opacity: 0.2; }
-  .keyboard-button:hover {
+  .keyboard-button:hover, .keyboard-button:focus {
     opacity: 0.8; }
+
+.app-bar__keyboard-shortcuts {
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  left: 54px;
+  margin-bottom: 24px;
+  padding: 0 20px;
+  position: absolute;
+  width: 359px; }
+  .app-bar__keyboard-shortcuts dt, .app-bar__keyboard-shortcuts dd {
+    border-bottom: 1px solid #e8e8e8;
+    flex: 50%;
+    line-height: 3.25rem; }
+    .app-bar__keyboard-shortcuts dt:last-child, .app-bar__keyboard-shortcuts dd:last-child {
+      border-bottom: none; }
+  .app-bar__keyboard-shortcuts dt {
+    font-weight: 500; }
+  .app-bar__keyboard-shortcuts dd {
+    margin-left: 0; }
+
+.app-bar .app-bar__keyboard-shortcuts {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease; }
+  .app-bar .app-bar__keyboard-shortcuts.is-active {
+    opacity: 1;
+    visibility: visible; }
 
 .app-title {
   font-size: 1rem;
@@ -415,30 +447,6 @@ kbd {
       font-weight: normal;
       color: #4a4945; }
 
-.app-bar__keyboard-shortcuts {
-  align-items: stretch;
-  background: #fff;
-  border: 1px solid #e8e8e8;
-  border-radius: 4px;
-  bottom: 0;
-  display: flex;
-  flex-wrap: wrap;
-  left: 54px;
-  margin-bottom: 24px;
-  padding: 0 20px;
-  position: absolute;
-  width: 359px; }
-  .app-bar__keyboard-shortcuts dt, .app-bar__keyboard-shortcuts dd {
-    border-bottom: 1px solid #e8e8e8;
-    flex: 50%;
-    line-height: 3.25rem; }
-    .app-bar__keyboard-shortcuts dt:last-child, .app-bar__keyboard-shortcuts dd:last-child {
-      border-bottom: none; }
-  .app-bar__keyboard-shortcuts dt {
-    font-weight: 500; }
-  .app-bar__keyboard-shortcuts dd {
-    margin-left: 0; }
-
 .button {
   background-color: #ffda48; }
 
@@ -561,4 +569,12 @@ kbd {
     .tags-list a:hover {
       opacity: 1; }
 
-/*# sourceMappingURL=notch.css.map */
+.show-for-sr {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important; }
