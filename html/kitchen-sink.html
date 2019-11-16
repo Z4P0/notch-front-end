@@ -139,16 +139,65 @@
       <div class="spacer"></div>
       <h2>App Bar</h2>
       <hr>
-      <h3>Keyboard Shortcuts</h3>
-      <dl class="app-bar__keyboard-shortcuts">
-        <dt>New Category Post</dt>
-        <dd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></dd>
-        <dt>New Date Post</dt>
-        <dd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></dd>
-      </dl>
-      <header class="app-bar">
+      <header class="app-bar" id="app-bar">
         <h1 class="app-title">Anvil</h1>
-        <button class="app-bar__button menu-button" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="15"><g fill="#1F1E1A" fill-rule="evenodd"><path d="M20 .575v2H0v-2zM20 6.575v2H0v-2zM20 12.575v2H0v-2z"/></g></svg><span class="show-for-sr">Menu</span></button>
+        <button class="app-bar__button menu-button" onclick="showAppNav();" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="15"><g fill="#1F1E1A" fill-rule="evenodd"><path d="M20 .575v2H0v-2zM20 6.575v2H0v-2zM20 12.575v2H0v-2z"/></g></svg><span class="show-for-sr">Menu</span></button>
+        <nav class="app-nav" id="app-nav">
+          <h2 class="show-for-sr">App Navigation</h2>
+          <div class="app-bar__navigation">
+            <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" fill-rule="evenodd" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg></button>
+            <select class="app-bar__filter__dropdown select-css" id="filter">
+              <option value="">All</option>
+              <option value="1">001</option>
+              <option value="2">Lorem</option>
+              <option value="2">Ipsum</option>
+            </select>
+          </div>
+          <ul class="list list--root-buckets">
+            <li class="most-recent">
+              <h2 class="category-list__title">Photography</h2>
+              <p class="content-meta category-list__date">May 2019 — 001</p>
+              <p class="content-meta category-list__meta"><span>7 posts</span>
+                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+              </p>
+            </li>
+            <li>
+              <h2 class="category-list__title">C4D</h2>
+              <p class="content-meta category-list__date">April 2019 — 001</p>
+              <p class="content-meta category-list__meta"><span>31 posts</span>
+                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+              </p>
+            </li>
+            <li>
+              <h2 class="category-list__title">Illustration</h2>
+              <p class="content-meta category-list__date">March 2019 — 001</p>
+              <p class="content-meta category-list__meta"><span>31 posts</span>
+                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+              </p>
+            </li>
+            <li>
+              <h2 class="category-list__title">Aquascaping</h2>
+              <p class="content-meta category-list__date">February 2019 — 001</p>
+              <p class="content-meta category-list__meta"><span>28 posts</span>
+                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+              </p>
+            </li>
+            <li>
+              <h2 class="category-list__title">February</h2>
+              <p class="content-meta category-list__date">2019</p>
+              <p class="content-meta category-list__meta"><span>28 posts</span>
+                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+              </p>
+            </li>
+            <li>
+              <h2 class="category-list__title">January</h2>
+              <p class="content-meta category-list__date">2019</p>
+              <p class="content-meta category-list__meta"><span>31 posts</span>
+                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+              </p>
+            </li>
+          </ul>
+        </nav>
         <button class="app-bar__button keyboard-button" onclick="showKeyboardShortcuts();" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16"><g fill="none" fill-rule="evenodd"><rect width="23" height="14" x="1" y="1" stroke="#1F1E1A" stroke-width="2" rx="2"/><rect width="1.994" height="1.994" x="4" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4.997" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="8.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="11.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="14.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="17.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4" y="10.024" fill="#1E1D19"/><rect width="11.056" height="1.994" x="6.992" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="7.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="10.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="13.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="16.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="4" fill="#1E1D19"/></g></svg><span class="show-for-sr">Keyboard Shortcuts</span></button>
         <dl class="app-bar__keyboard-shortcuts" id="keyboard-shortcuts-list">
           <dt>New Category Post</dt>
@@ -157,6 +206,14 @@
           <dd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></dd>
         </dl>
       </header>
+      <h3>Keyboard Shortcuts</h3>
+      <dl class="app-bar__keyboard-shortcuts">
+        <dt>New Category Post</dt>
+        <dd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></dd>
+        <dt>New Date Post</dt>
+        <dd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></dd>
+      </dl>
+      <h3>App Navigation</h3>
       <nav class="app-nav">
         <h2 class="show-for-sr">App Navigation</h2>
         <div class="app-bar__navigation">
@@ -213,68 +270,6 @@
           </li>
         </ul>
       </nav>
-      <h3>Root</h3>
-      <header class="app-bar">
-        <h1 class="app-title">Anvil</h1>
-        <button class="app-bar__button menu-button" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="15"><g fill="#1F1E1A" fill-rule="evenodd"><path d="M20 .575v2H0v-2zM20 6.575v2H0v-2zM20 12.575v2H0v-2z"/></g></svg><span class="show-for-sr">Menu</span></button>
-        <button class="app-bar__button keyboard-button" onclick="showKeyboardShortcuts();" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16"><g fill="none" fill-rule="evenodd"><rect width="23" height="14" x="1" y="1" stroke="#1F1E1A" stroke-width="2" rx="2"/><rect width="1.994" height="1.994" x="4" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4.997" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="8.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="11.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="14.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="17.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4" y="10.024" fill="#1E1D19"/><rect width="11.056" height="1.994" x="6.992" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="7.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="10.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="13.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="16.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="4" fill="#1E1D19"/></g></svg><span class="show-for-sr">Keyboard Shortcuts</span></button>
-        <nav class="app-nav">
-          <h2 class="show-for-sr">App Navigation</h2>
-          <div class="app-bar__navigation">
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" fill-rule="evenodd" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg></button>
-            <select class="app-bar__filter__dropdown select-css" id="filter">
-              <option value="">All</option>
-              <option value="1">001</option>
-              <option value="2">Lorem</option>
-              <option value="2">Ipsum</option>
-            </select>
-          </div>
-          <ul class="list list--root-buckets">
-            <li class="most-recent">
-              <h2 class="category-list__title">Photography</h2>
-              <p class="content-meta category-list__date">May 2019 — 001</p>
-              <p class="content-meta category-list__meta"><span>7 posts</span>
-                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-              </p>
-            </li>
-            <li>
-              <h2 class="category-list__title">C4D</h2>
-              <p class="content-meta category-list__date">April 2019 — 001</p>
-              <p class="content-meta category-list__meta"><span>31 posts</span>
-                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-              </p>
-            </li>
-            <li>
-              <h2 class="category-list__title">Illustration</h2>
-              <p class="content-meta category-list__date">March 2019 — 001</p>
-              <p class="content-meta category-list__meta"><span>31 posts</span>
-                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-              </p>
-            </li>
-            <li>
-              <h2 class="category-list__title">Aquascaping</h2>
-              <p class="content-meta category-list__date">February 2019 — 001</p>
-              <p class="content-meta category-list__meta"><span>28 posts</span>
-                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-              </p>
-            </li>
-            <li>
-              <h2 class="category-list__title">February</h2>
-              <p class="content-meta category-list__date">2019</p>
-              <p class="content-meta category-list__meta"><span>28 posts</span>
-                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-              </p>
-            </li>
-            <li>
-              <h2 class="category-list__title">January</h2>
-              <p class="content-meta category-list__date">2019</p>
-              <p class="content-meta category-list__meta"><span>31 posts</span>
-                <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-              </p>
-            </li>
-          </ul>
-        </nav>
-      </header>
       <div class="spacer"></div>
       <div class="spacer"></div>
     </div>

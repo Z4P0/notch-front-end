@@ -1,6 +1,10 @@
 // App bar
 // ==================================================
-// const keyboardShortcutsBtn = document.querySelector('#keyboard-shortcuts-toggle');
+
+
+function showAppNav() {
+  document.querySelector('#app-bar').classList.toggle('is-active');
+}
 
 function showKeyboardShortcuts() {
   document.querySelector('#keyboard-shortcuts-list').classList.toggle('is-active');

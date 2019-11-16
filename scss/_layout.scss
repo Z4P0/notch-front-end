@@ -3,13 +3,17 @@ $size-3: 16px;
 
 
 
-.layout-app-container {
+.layout-app {
   display: grid;
   grid-template-columns: 4.25rem 1fr;
   height: 100vh;
-  > main {
-    height: 100vh;
-    overflow: scroll;
+}
+.app-main {
+  height: 100vh;
+  overflow: scroll;
+  transition: transform .3s ease;
+  .app-bar.is-active + & {
+    transform: translateX(336px);
   }
 }
 

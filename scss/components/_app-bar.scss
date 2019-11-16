@@ -1,12 +1,17 @@
 // root container
 .app-bar {
   display: flex;
+  background-color: $white;
   border-right: 1px solid #e6e6e6;
-  max-width: 4.25rem;
+  max-width: 69px;
   height: 100vh;
   position: relative;
+  transition: transform .3s ease;
   hr {
     border-color: #0D0C0B;
+  }
+  &.is-active {
+    transform: translateX(336px);
   }
 }
 
@@ -105,21 +110,20 @@
 
 .app-nav {
   background-color: #1f1e1a;
-  bottom: 0;
   color: #fff;
   height: 100vh;
-  left: 100%;
   overflow: scroll;
-  position: absolute;
-  top: 0;
   width: 336px;
-  h2, h3, h4 {
-    color: inherit;
-  }
   button {
     background-color: transparent;
     margin-bottom: 0;
   }
+}
+
+.app-bar .app-nav {
+  right: 100%;
+  position: absolute;
+  top: 0;
 }
 
 
