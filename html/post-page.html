@@ -17,7 +17,7 @@
           <nav class="app-nav" id="app-nav">
             <h2 class="show-for-sr">App Navigation</h2>
             <div class="app-bar__navigation">
-              <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" fill-rule="evenodd" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg></button>
+              <button><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" fill-rule="evenodd" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg></button>
               <select class="app-bar__filter__dropdown select-css" id="filter">
                 <option value="">All</option>
                 <option value="1">001</option>
@@ -25,48 +25,60 @@
                 <option value="2">Ipsum</option>
               </select>
             </div>
-            <ul class="list list--root-buckets">
-              <li class="most-recent">
-                <h2 class="category-list__title">Photography</h2>
-                <p class="content-meta category-list__date">May 2019 — 001</p>
-                <p class="content-meta category-list__meta"><span>7 posts</span>
-                  <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-                </p>
+            <ul class="list">
+              <li>
+                <div class="category-card category-card--most-recent"><a href="#">
+                    <p>May 2019 — 001</p>
+                    <h3>Photography</h3></a>
+                  <p class="category-card__extras">7 posts
+                    <button><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg><span class="show-for-sr">More options</span></button>
+                  </p>
+                </div>
               </li>
               <li>
-                <h2 class="category-list__title">C4D</h2>
-                <p class="content-meta category-list__date">April 2019 — 001</p>
-                <p class="content-meta category-list__meta"><span>31 posts</span>
-                  <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-                </p>
+                <div class="category-card"><a href="#">
+                    <p>April 2019 — 001</p>
+                    <h3>C4D</h3></a>
+                  <p class="category-card__extras">31 posts
+                    <button><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg><span class="show-for-sr">More options</span></button>
+                  </p>
+                </div>
               </li>
               <li>
-                <h2 class="category-list__title">Illustration</h2>
-                <p class="content-meta category-list__date">March 2019 — 001</p>
-                <p class="content-meta category-list__meta"><span>31 posts</span>
-                  <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-                </p>
+                <div class="category-card"><a href="#">
+                    <p>March 2019 — 001</p>
+                    <h3>Illustration</h3></a>
+                  <p class="category-card__extras">31 posts
+                    <button><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg><span class="show-for-sr">More options</span></button>
+                  </p>
+                </div>
               </li>
               <li>
-                <h2 class="category-list__title">Aquascaping</h2>
-                <p class="content-meta category-list__date">February 2019 — 001</p>
-                <p class="content-meta category-list__meta"><span>28 posts</span>
-                  <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-                </p>
+                <div class="category-card"><a href="#">
+                    <p>February 2019 — 001</p>
+                    <h3>Aquascaping</h3></a>
+                  <p class="category-card__extras">28 posts
+                    <button><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg><span class="show-for-sr">More options</span></button>
+                  </p>
+                </div>
               </li>
               <li>
-                <h2 class="category-list__title">February</h2>
-                <p class="content-meta category-list__date">2019</p>
-                <p class="content-meta category-list__meta"><span>28 posts</span>
-                  <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-                </p>
+                <div class="category-card"><a href="#">
+                    <p>2019</p>
+                    <h3>February</h3></a>
+                  <p class="category-card__extras">28 posts
+                    <button><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg><span class="show-for-sr">More options</span></button>
+                  </p>
+                </div>
               </li>
               <li>
-                <h2 class="category-list__title">January</h2>
-                <p class="content-meta category-list__date">2019</p>
-                <p class="content-meta category-list__meta"><span>31 posts</span>
-                  <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-                </p>
+                <div class="category-card"><a href="#">
+                    <p>2019</p>
+                    <h3>January</h3></a>
+                  <p class="category-card__extras">31 posts
+                    <button><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg><span class="show-for-sr">More options</span></button>
+                  </p>
+                </div>
               </li>
             </ul>
           </nav>

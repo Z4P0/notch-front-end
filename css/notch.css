@@ -6,7 +6,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-family: 'ATC Arquette';
+  font-family: 'ATC Arquette', Helvetica, Arial;
   line-height: 1.75;
   margin: 0; }
 
@@ -17,9 +17,6 @@ h1 {
   font-size: 3.125rem;
   line-height: 1; }
 
-h2 {
-  font-size: 1.25rem; }
-
 h1, h2, h3, h4, h5, h6,
 p, ul, ol {
   margin-top: 0; }
@@ -29,6 +26,9 @@ figure {
 
 img {
   max-width: 100%; }
+
+svg {
+  fill: currentColor; }
 
 figure img {
   display: block; }
@@ -46,6 +46,7 @@ select,
 button,
 textarea {
   box-sizing: border-box;
+  color: inherit;
   display: block;
   font-family: inherit;
   font-size: 1rem;
@@ -95,6 +96,9 @@ kbd {
   transition: transform .3s ease; }
   .app-bar.is-active + .app-main {
     transform: translateX(336px); }
+
+.row {
+  padding: 0 1rem; }
 
 .spacer {
   margin-bottom: 4rem; }
@@ -312,32 +316,8 @@ kbd {
 
 .list {
   list-style: none;
-  margin: 0; }
-  .list > li {
-    cursor: pointer;
-    transition: background-color .3s ease; }
-
-.list__content {
-  display: flex;
-  flex-direction: column-reverse; }
-
-.list--root-buckets {
-  padding: 1rem; }
-  .list--root-buckets > li {
-    background-color: #292825;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column-reverse;
-    margin-bottom: 1rem;
-    padding: 0.75rem 1rem 1rem; }
-    .list--root-buckets > li:last-child {
-      margin-bottom: 0; }
-    .list--root-buckets > li:hover {
-      background-color: #302f2d; }
-
-.category-list__title {
-  margin-bottom: 0; }
+  margin: 0;
+  padding: 0; }
 
 .category-list__date {
   letter-spacing: 0.3px;
@@ -376,31 +356,6 @@ kbd {
   padding: 0 0 0 13px;
   margin: 0 0 0 5px;
   width: auto; }
-
-.list--root-buckets .most-recent {
-  background-color: #fff;
-  color: #1f1e1a;
-  position: relative; }
-  .list--root-buckets .most-recent:hover {
-    background-color: #fff; }
-  .list--root-buckets .most-recent:before {
-    background-color: #ffda48;
-    border-radius: 5px 0 10px 0;
-    content: "Most Recent";
-    display: inline-block;
-    font-family: "Roboto Mono";
-    font-weight: bold;
-    font-size: .5625rem;
-    left: 0;
-    letter-spacing: .63px;
-    padding: 4px 9px;
-    position: absolute;
-    text-transform: uppercase;
-    top: 0; }
-  .list--root-buckets .most-recent .category-list__meta,
-  .list--root-buckets .most-recent .category-list__extras g {
-    color: #9b9e9e;
-    fill: #9b9e9e; }
 
 .list--category-posts {
   padding: 0; }
@@ -462,6 +417,64 @@ kbd {
   color: #787875;
   letter-spacing: 0;
   padding: 8px; }
+
+.category-card {
+  background-color: #292825;
+  border-radius: 5px;
+  color: #999999;
+  display: flex;
+  flex-direction: column-reverse;
+  font-family: "Roboto Mono";
+  font-size: 0.75rem;
+  margin: 1rem;
+  padding: 0.75rem 1rem 0.5rem;
+  text-transform: uppercase;
+  transition: background-color .3s ease;
+  will-change: background-color; }
+  .category-card:hover {
+    background-color: #302f2d; }
+  .category-card a {
+    color: inherit;
+    text-decoration: none; }
+  .category-card h3 {
+    color: #fff;
+    font-family: 'ATC Arquette', Helvetica, Arial;
+    font-size: 1.25rem;
+    text-transform: none; }
+  .category-card h3, .category-card p {
+    margin-bottom: 0; }
+
+.category-card__extras {
+  display: flex;
+  justify-content: flex-end; }
+  .category-card__extras button {
+    background-color: transparent;
+    margin: 0 0 0 5px;
+    padding: 0 0 0 13px; }
+
+.category-card--most-recent {
+  background-color: #fff;
+  position: relative; }
+  .category-card--most-recent:before {
+    background-color: #ffda48;
+    border-radius: 5px 0 10px 0;
+    color: #1f1e1a;
+    content: "Most Recent";
+    display: inline-block;
+    font-family: "Roboto Mono";
+    font-weight: bold;
+    font-size: .5625rem;
+    left: 0;
+    letter-spacing: .63px;
+    line-height: 1;
+    padding: 4px 9px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0; }
+  .category-card--most-recent h3 {
+    color: #1f1e1a; }
+  .category-card--most-recent:hover {
+    background-color: #fff; }
 
 .post-form {
   margin-left: auto;

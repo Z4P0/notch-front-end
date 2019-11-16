@@ -20,53 +20,68 @@ block body
         h2.show-for-sr App Navigation
         .app-bar__navigation
           button
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" fill-rule="evenodd" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" fill-rule="evenodd" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg>
           select#filter.app-bar__filter__dropdown.select-css
             option(value="") All
             option(value="1") 001
             option(value="2") Lorem
             option(value="2") Ipsum
 
-        ul.list.list--root-buckets
-          li.most-recent
-            h2.category-list__title Photography
-            p.content-meta.category-list__date May 2019 — 001
-            p.content-meta.category-list__meta
-              span 7 posts
-              button.category-list__extras <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+        ul.list
           li
-            h2.category-list__title C4D
-            p.content-meta.category-list__date April 2019 — 001
-            p.content-meta.category-list__meta
-              span 31 posts
-              button.category-list__extras <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+            .category-card.category-card--most-recent
+              a(href="#")
+                p May 2019 — 001
+                h3 Photography
+              p.category-card__extras 7 posts
+                button
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                  span.show-for-sr More options
           li
-            h2.category-list__title Illustration
-            p.content-meta.category-list__date March 2019 — 001
-            p.content-meta.category-list__meta
-              span 31 posts
-              button.category-list__extras <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+            .category-card
+              a(href="#")
+                p April 2019 — 001
+                h3 C4D
+              p.category-card__extras 31 posts
+                button
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                  span.show-for-sr More options
           li
-            h2.category-list__title Aquascaping
-            p.content-meta.category-list__date February 2019 — 001
-            p.content-meta.category-list__meta
-              span 28 posts
-              button.category-list__extras <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+            .category-card
+              a(href="#")
+                p March 2019 — 001
+                h3 Illustration
+              p.category-card__extras 31 posts
+                button
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                  span.show-for-sr More options
           li
-            h2.category-list__title February
-            p.content-meta.category-list__date 2019
-            p.content-meta.category-list__meta
-              span 28 posts
-              button.category-list__extras <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+            .category-card
+              a(href="#")
+                p February 2019 — 001
+                h3 Aquascaping
+              p.category-card__extras 28 posts
+                button
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                  span.show-for-sr More options
           li
-            h2.category-list__title January
-            p.content-meta.category-list__date 2019
-            p.content-meta.category-list__meta
-              span 31 posts
-              button.category-list__extras <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-
-
-
+            .category-card
+              a(href="#")
+                p 2019
+                h3 February
+              p.category-card__extras 28 posts
+                button
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                  span.show-for-sr More options
+          li
+            .category-card
+              a(href="#")
+                p 2019
+                h3 January
+              p.category-card__extras 31 posts
+                button
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                  span.show-for-sr More options
 
 
       button#keyboard-shortcuts-toggle.app-bar__button.keyboard-button(onclick="showKeyboardShortcuts();", type="button")
