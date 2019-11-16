@@ -1,6 +1,8 @@
 h2 App Bar
 hr
 
+.spacer
+
 .layout-app
 
     //- full component
@@ -29,7 +31,7 @@ hr
               a(href="")
                 p May 2019 — 001
                 h3 Photography
-              p.category-card__extras 7 posts
+              p.card-extras 7 posts
                 button
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                   span.show-for-sr More options
@@ -38,7 +40,7 @@ hr
               a(href="")
                 p April 2019 — 001
                 h3 C4D
-              p.category-card__extras 31 posts
+              p.card-extras 31 posts
                 button
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                   span.show-for-sr More options
@@ -47,7 +49,7 @@ hr
               a(href="")
                 p March 2019 — 001
                 h3 Illustration
-              p.category-card__extras 31 posts
+              p.card-extras 31 posts
                 button
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                   span.show-for-sr More options
@@ -56,7 +58,7 @@ hr
               a(href="")
                 p February 2019 — 001
                 h3 Aquascaping
-              p.category-card__extras 28 posts
+              p.card-extras 28 posts
                 button
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                   span.show-for-sr More options
@@ -65,7 +67,7 @@ hr
               a(href="")
                 p 2019
                 h3 February
-              p.category-card__extras 28 posts
+              p.card-extras 28 posts
                 button
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                   span.show-for-sr More options
@@ -74,7 +76,7 @@ hr
               a(href="")
                 p 2019
                 h3 January
-              p.category-card__extras 31 posts
+              p.card-extras 31 posts
                 button
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                   span.show-for-sr More options
@@ -113,7 +115,7 @@ hr
           a(href="#")
             p April 2019 — 001
             h3 C4D
-          p.category-card__extras 31 posts
+          p.card-extras 31 posts
             button(type="button")
               <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
               span.show-for-sr More options
@@ -122,7 +124,7 @@ hr
           a(href="#")
             p April 2019 — 001
             h3 C4D
-          p.category-card__extras 31 posts
+          p.card-extras 31 posts
             button(type="button")
               <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
               span.show-for-sr More options
@@ -131,23 +133,35 @@ hr
 
 
       h3 Post Card
-      .post-card
-        figure.thumbnail
+      .row.bg-grey-400.white.pv3
+        //- ul.list.list--category-posts
+          li
+            figure.thumbnail
+              img(src="../images/thumbnail-4.png", alt="")
+            .list__content
+              h4.mb0 The philosophical argument for working less (and...
+              p.content-meta.mb0 05.15.19
+              .content-meta.category-list__meta
+                span #0203
+                button(type="button").category-list__extras
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+
+
+        a(href="#").post-card
           img(src="../images/thumbnail-4.png", alt="")
-        .list__content
-          h4.mb0 The philosophical argument for working less (and...
-          p.content-meta.mb0 05.15.19
-          .content-meta.category-list__meta
-            span #0203
-            button(type="button").category-list__extras
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+          div
+            h3 The philosophical argument for working less (and wasting time)
+            p 05.15.19
+            p.card-extras #0203
+              button(type="button")
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
 
 
 
-      h3 Category Header
-      //- ==================================================
+      //- h3 Category Header
+      //- //- ==================================================
 
-      header.category-bucket-header
+      //- header.category-bucket-header
         p.content-meta.mb0 May 2019 — 001
         h3.bucket-title Photography
         p Chapter 002 for Photography will be focused exclusively on film photography. This is my first time with film, so I’ll be learning the ins and the outs of the process of development as well as how to use the camera.
@@ -168,52 +182,48 @@ h3 Bucket Items
     p.content-meta.mb0 May 2019 — 001
     h3.bucket-title Photography
     p Chapter 002 for Photography will be focused exclusively on film photography. This is my first time with film, so I’ll be learning the ins and the outs of the process of development as well as how to use the camera.
-  ul.list.list--category-posts
+  ul.list
     li
-      figure.thumbnail
+      a(href="#").post-card
         img(src="../images/thumbnail-4.png", alt="")
-      .list__content
-        h4.mb0 The philosophical argument for working less (and...
-        p.content-meta.mb0 05.15.19
-        .content-meta.category-list__meta
-          span #0203
-          button(type="button").category-list__extras
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+        div
+          h3 The philosophical argument for working less (and...
+          p 05.15.19
+          p.card-extras #0203
+            button(type="button")
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
     li
-      figure.thumbnail
-        img(src="", alt="")
-      .list__content
-        h4.mb0 Of Coffeehouses Combined With Its Popularity
-        p.content-meta.mb0 05.14.19
-        .content-meta.category-list__meta
-          span #0202
-          button(type="button").category-list__extras
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+      a(href="#").post-card
+        img(src="../images/thumbnail-3.png", alt="")
+        div
+          h3 Of Coffeehouses Combined With Its Popularity
+          p 05.14.19
+          p.card-extras #0202
+            button(type="button")
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
     li
-      figure.thumbnail
-        img(src="../images/thumbnail-1.png", alt="")
-      .list__content
-        h4.mb0 With the Modern Creative Class
-        p.content-meta.mb0 05.13.19
-        .content-meta.category-list__meta
-          span #0201
-          button(type="button").category-list__extras
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-          ul
+      a(href="#").post-card
+        img(src="../images/thumbnail-2.png", alt="")
+        div
+          h3 With the Modern Creative Class
+          p 05.13.19
+          p.card-extras #0201
+            button(type="button")
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+          //- ul
             li
               a(href="#") Edit
             li
               a(href="#") Delete
     li
-      figure.thumbnail
+      a(href="#").post-card
         img(src="../images/thumbnail-3.png", alt="")
-      .list__content
-        h4.mb0 Has Led to Hipsters Exerting a Strong Influence
-        p.content-meta.mb0 05.12.19
-        .content-meta.category-list__meta
-          span #0200
-          button(type="button").category-list__extras
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+        div
+          h3 Has Led to Hipsters Exerting a Strong Influence
+          p 05.12.19
+          p.card-extras #0200
+            button(type="button")
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
 
 .spacer
 

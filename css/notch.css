@@ -331,20 +331,6 @@ kbd {
   margin: 0 0 0 5px;
   width: auto; }
 
-.list--category-posts {
-  padding: 0; }
-  .list--category-posts > li {
-    border: 1px solid #0d0c0b;
-    display: flex;
-    padding: 16px 21px; }
-    .list--category-posts > li:hover {
-      background-color: #292825; }
-  .list--category-posts h4 {
-    font-size: 0.875rem;
-    line-height: 1.125rem; }
-  .list--category-posts .thumbnail {
-    margin-right: 17px; }
-
 .list--categories-list {
   padding-left: 16px;
   padding-right: 16px; }
@@ -392,6 +378,14 @@ kbd {
   letter-spacing: 0;
   padding: 8px; }
 
+.card-extras {
+  display: flex;
+  justify-content: flex-end; }
+  .card-extras button {
+    background-color: transparent;
+    margin: 0 0 0 5px;
+    padding: 0 0 0 13px; }
+
 .category-card {
   background-color: #292825;
   border-radius: 5px;
@@ -417,14 +411,6 @@ kbd {
     text-transform: none; }
   .category-card h3, .category-card p {
     margin-bottom: 0; }
-
-.category-card__extras {
-  display: flex;
-  justify-content: flex-end; }
-  .category-card__extras button {
-    background-color: transparent;
-    margin: 0 0 0 5px;
-    padding: 0 0 0 13px; }
 
 .category-card--most-recent {
   background-color: #fff;
@@ -582,6 +568,32 @@ kbd {
     opacity: 0.7; }
     .tags-list a:hover {
       opacity: 1; }
+
+.post-card {
+  border: 1px solid #080706;
+  color: #999999;
+  display: flex;
+  font-family: "Roboto Mono";
+  font-size: 0.75rem;
+  padding: 16px 21px;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .post-card img {
+    margin-right: 1rem; }
+  .post-card h3 {
+    color: #fff;
+    font-family: 'ATC Arquette', Helvetica, Arial;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    margin-bottom: 0;
+    text-transform: none; }
+  .post-card p {
+    margin-bottom: 0; }
+  .post-card:hover {
+    background-color: #292825; }
+
+li + li .post-card {
+  border-top: none; }
 
 .show-for-sr {
   position: absolute !important;

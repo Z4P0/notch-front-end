@@ -78,9 +78,6 @@
 
 
 
-
-
-
 .app-nav {
   background-color: $grey-400;
   color: #fff;
@@ -293,26 +290,6 @@
   width: auto;
 }
 
-
-
-.list--category-posts {
-  padding: 0;
-  > li {
-    border: 1px solid #0d0c0b;
-    display: flex;
-    padding: 16px 21px;
-    &:hover {
-      background-color: #292825;
-    }
-  }
-  h4 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-  .thumbnail {
-    margin-right: 17px;
-  }
-}
 
 
 .list--categories-list {
