@@ -117,6 +117,12 @@ kbd {
   .app-bar hr {
     border-color: #0D0C0B; }
 
+.app-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: auto;
+  writing-mode: sideways-lr; }
+
 .app-bar__button {
   background-color: transparent;
   left: 0;
@@ -143,13 +149,10 @@ kbd {
   background: #fff;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
-  bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  left: 54px;
   margin-bottom: 24px;
   padding: 0 20px;
-  position: absolute;
   width: 359px; }
   .app-bar__keyboard-shortcuts dt, .app-bar__keyboard-shortcuts dd {
     border-bottom: 1px solid #e8e8e8;
@@ -163,20 +166,17 @@ kbd {
     margin-left: 0; }
 
 .app-bar .app-bar__keyboard-shortcuts {
+  bottom: 0;
+  left: 54px;
   opacity: 0;
+  position: absolute;
   visibility: hidden;
   transition: opacity .3s ease, visibility .3s ease; }
   .app-bar .app-bar__keyboard-shortcuts.is-active {
     opacity: 1;
     visibility: visible; }
 
-.app-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: auto;
-  writing-mode: sideways-lr; }
-
-.app-bar-content {
+.app-nav {
   background-color: #1f1e1a;
   bottom: 0;
   color: #fff;
@@ -186,9 +186,9 @@ kbd {
   position: absolute;
   top: 0;
   width: 336px; }
-  .app-bar-content h2, .app-bar-content h3, .app-bar-content h4 {
+  .app-nav h2, .app-nav h3, .app-nav h4 {
     color: inherit; }
-  .app-bar-content button {
+  .app-nav button {
     background-color: transparent;
     margin-bottom: 0; }
 

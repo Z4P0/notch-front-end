@@ -140,6 +140,12 @@
       <h2>App Bar</h2>
       <hr>
       <h3>Keyboard Shortcuts</h3>
+      <dl class="app-bar__keyboard-shortcuts">
+        <dt>New Category Post</dt>
+        <dd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></dd>
+        <dt>New Date Post</dt>
+        <dd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></dd>
+      </dl>
       <header class="app-bar">
         <h1 class="app-title">Anvil</h1>
         <button class="app-bar__button menu-button" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="15"><g fill="#1F1E1A" fill-rule="evenodd"><path d="M20 .575v2H0v-2zM20 6.575v2H0v-2zM20 12.575v2H0v-2z"/></g></svg><span class="show-for-sr">Menu</span></button>
@@ -151,12 +157,69 @@
           <dd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd></dd>
         </dl>
       </header>
+      <nav class="app-nav">
+        <h2 class="show-for-sr">App Navigation</h2>
+        <div class="app-bar__navigation">
+          <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" fill-rule="evenodd" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg></button>
+          <select class="app-bar__filter__dropdown select-css" id="filter">
+            <option value="">All</option>
+            <option value="1">001</option>
+            <option value="2">Lorem</option>
+            <option value="2">Ipsum</option>
+          </select>
+        </div>
+        <ul class="list list--root-buckets">
+          <li class="most-recent">
+            <h2 class="category-list__title">Photography</h2>
+            <p class="content-meta category-list__date">May 2019 — 001</p>
+            <p class="content-meta category-list__meta"><span>7 posts</span>
+              <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+            </p>
+          </li>
+          <li>
+            <h2 class="category-list__title">C4D</h2>
+            <p class="content-meta category-list__date">April 2019 — 001</p>
+            <p class="content-meta category-list__meta"><span>31 posts</span>
+              <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+            </p>
+          </li>
+          <li>
+            <h2 class="category-list__title">Illustration</h2>
+            <p class="content-meta category-list__date">March 2019 — 001</p>
+            <p class="content-meta category-list__meta"><span>31 posts</span>
+              <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+            </p>
+          </li>
+          <li>
+            <h2 class="category-list__title">Aquascaping</h2>
+            <p class="content-meta category-list__date">February 2019 — 001</p>
+            <p class="content-meta category-list__meta"><span>28 posts</span>
+              <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+            </p>
+          </li>
+          <li>
+            <h2 class="category-list__title">February</h2>
+            <p class="content-meta category-list__date">2019</p>
+            <p class="content-meta category-list__meta"><span>28 posts</span>
+              <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+            </p>
+          </li>
+          <li>
+            <h2 class="category-list__title">January</h2>
+            <p class="content-meta category-list__date">2019</p>
+            <p class="content-meta category-list__meta"><span>31 posts</span>
+              <button class="category-list__extras"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
+            </p>
+          </li>
+        </ul>
+      </nav>
       <h3>Root</h3>
       <header class="app-bar">
         <h1 class="app-title">Anvil</h1>
         <button class="app-bar__button menu-button" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="15"><g fill="#1F1E1A" fill-rule="evenodd"><path d="M20 .575v2H0v-2zM20 6.575v2H0v-2zM20 12.575v2H0v-2z"/></g></svg><span class="show-for-sr">Menu</span></button>
         <button class="app-bar__button keyboard-button" onclick="showKeyboardShortcuts();" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16"><g fill="none" fill-rule="evenodd"><rect width="23" height="14" x="1" y="1" stroke="#1F1E1A" stroke-width="2" rx="2"/><rect width="1.994" height="1.994" x="4" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4.997" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="8.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="11.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="14.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="17.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4" y="10.024" fill="#1E1D19"/><rect width="11.056" height="1.994" x="6.992" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="7.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="10.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="13.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="16.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="4" fill="#1E1D19"/></g></svg><span class="show-for-sr">Keyboard Shortcuts</span></button>
-        <div class="app-bar-content">
+        <nav class="app-nav">
+          <h2 class="show-for-sr">App Navigation</h2>
           <div class="app-bar__navigation">
             <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" fill-rule="evenodd" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg></button>
             <select class="app-bar__filter__dropdown select-css" id="filter">
@@ -210,163 +273,10 @@
               </p>
             </li>
           </ul>
-        </div>
+        </nav>
       </header>
       <div class="spacer"></div>
-      <h3>Bucket Items</h3>
-      <header class="app-bar">
-        <h1 class="app-title">Anvil</h1>
-        <button class="app-bar__button menu-button" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="15"><g fill="#1F1E1A" fill-rule="evenodd"><path d="M20 .575v2H0v-2zM20 6.575v2H0v-2zM20 12.575v2H0v-2z"/></g></svg><span class="show-for-sr">Menu</span></button>
-        <button class="app-bar__button keyboard-button" onclick="showKeyboardShortcuts();" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16"><g fill="none" fill-rule="evenodd"><rect width="23" height="14" x="1" y="1" stroke="#1F1E1A" stroke-width="2" rx="2"/><rect width="1.994" height="1.994" x="4" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4.997" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="8.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="11.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="14.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="17.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4" y="10.024" fill="#1E1D19"/><rect width="11.056" height="1.994" x="6.992" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="7.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="10.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="13.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="16.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="4" fill="#1E1D19"/></g></svg><span class="show-for-sr">Keyboard Shortcuts</span></button>
-        <div class="app-bar-content">
-          <div class="app-bar__navigation">
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16"><polyline fill="none" stroke="#FFF" stroke-width="2" points="29.985 21.5 23.485 28 29.985 34.5" transform="translate(-22 -20)"/></svg></button>
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><g fill="none" fill-rule="evenodd" transform="translate(1.485 -.5)"><text fill="#999" font-family="ATCArquette-Medium, ATC Arquette" font-size="14" font-weight="400" letter-spacing=".2"><tspan x="6" y="14">i</tspan></text><circle cx="8" cy="9" r="8" stroke="#999"/></g></svg></button>
-          </div>
-          <header class="category-bucket-header">
-            <p class="content-meta mb0">May 2019 — 001</p>
-            <h3 class="bucket-title">Photography</h3>
-            <p>Chapter 002 for Photography will be focused exclusively on film photography. This is my first time with film, so I’ll be learning the ins and the outs of the process of development as well as how to use the camera.</p>
-          </header>
-          <ul class="list list--category-posts">
-            <li>
-              <figure class="thumbnail"><img src="../images/thumbnail-4.png" alt=""></figure>
-              <div class="list__content">
-                <h4 class="mb0">The philosophical argument for working less (and...</h4>
-                <p class="content-meta mb0">05.15.19</p>
-                <div class="content-meta category-list__meta"><span>#0203</span>
-                  <button class="category-list__extras" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-                </div>
-              </div>
-            </li>
-            <li>
-              <figure class="thumbnail"><img src="" alt=""></figure>
-              <div class="list__content">
-                <h4 class="mb0">Of Coffeehouses Combined With Its Popularity</h4>
-                <p class="content-meta mb0">05.14.19</p>
-                <div class="content-meta category-list__meta"><span>#0202</span>
-                  <button class="category-list__extras" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-                </div>
-              </div>
-            </li>
-            <li>
-              <figure class="thumbnail"><img src="../images/thumbnail-1.png" alt=""></figure>
-              <div class="list__content">
-                <h4 class="mb0">With the Modern Creative Class</h4>
-                <p class="content-meta mb0">05.13.19</p>
-                <div class="content-meta category-list__meta"><span>#0201</span>
-                  <button class="category-list__extras" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-                  <ul>
-                    <li><a href="#">Edit</a></li>
-                    <li><a href="#">Delete</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <figure class="thumbnail"><img src="../images/thumbnail-3.png" alt=""></figure>
-              <div class="list__content">
-                <h4 class="mb0">Has Led to Hipsters Exerting a Strong Influence</h4>
-                <p class="content-meta mb0">05.12.19</p>
-                <div class="content-meta category-list__meta"><span>#0200</span>
-                  <button class="category-list__extras" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg></button>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </header>
       <div class="spacer"></div>
-      <h3>Category Filter</h3>
-      <header class="app-bar">
-        <h1 class="app-title">Anvil</h1>
-        <button class="app-bar__button menu-button" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="15"><g fill="#1F1E1A" fill-rule="evenodd"><path d="M20 .575v2H0v-2zM20 6.575v2H0v-2zM20 12.575v2H0v-2z"/></g></svg><span class="show-for-sr">Menu</span></button>
-        <button class="app-bar__button keyboard-button" onclick="showKeyboardShortcuts();" type="button"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16"><g fill="none" fill-rule="evenodd"><rect width="23" height="14" x="1" y="1" stroke="#1F1E1A" stroke-width="2" rx="2"/><rect width="1.994" height="1.994" x="4" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4.997" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="8.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="11.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="14.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="17.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4" y="10.024" fill="#1E1D19"/><rect width="11.056" height="1.994" x="6.992" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="7.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="10.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="13.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="16.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="4" fill="#1E1D19"/></g></svg><span class="show-for-sr">Keyboard Shortcuts</span></button>
-        <div class="app-bar-content">
-          <div class="app-bar__navigation">
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" fill-rule="evenodd" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg></button>
-            <select class="app-bar__filter__dropdown select-css" id="filter">
-              <option value="">Filter by...</option>
-              <option value="1">001</option>
-              <option value="2">Lorem</option>
-              <option value="2">Ipsum</option>
-            </select>
-          </div>
-          <header class="ph3 pt3">
-            <p class="title-1 mb0">Selected Category</p>
-            <div class="flex items-center justify-between">
-              <p class="title-2 pv2 mb0">Pescatarianism</p>
-              <button class="button-1">Clear</button>
-            </div>
-          </header>
-          <hr>
-          <ul class="list list--categories-list">
-            <li><strong>A</strong>
-              <ul class="list">
-                <li><span>Aquascaping</span><span>001</span></li>
-              </ul>
-            </li>
-            <li><strong>B</strong></li>
-            <li><strong>C</strong>
-              <ul class="list">
-                <li><span>C4D</span><span>001</span></li>
-                <li><span>Cooking</span><span>001</span></li>
-                <li><span>Crossfit</span><span>001</span></li>
-              </ul>
-            </li>
-            <li><strong>D</strong></li>
-            <li><strong>E</strong></li>
-            <li><strong>F</strong>
-              <ul class="list">
-                <li><span>Feng Shui</span><span>001</span></li>
-              </ul>
-            </li>
-            <li><strong>G</strong></li>
-            <li><strong>H</strong></li>
-            <li><strong>I</strong>
-              <ul class="list">
-                <li><span>Illustration</span><span>001</span></li>
-              </ul>
-            </li>
-            <li><strong>J</strong></li>
-            <li><strong>K</strong></li>
-            <li><strong>L</strong></li>
-            <li><strong>M</strong></li>
-            <li><strong>N</strong></li>
-            <li><strong>O</strong></li>
-            <li><strong>P</strong>
-              <ul class="list">
-                <li><span>Painting</span><span>001</span></li>
-                <li class="selected"><span>Pescatarianism</span><span>001</span></li>
-                <li><span>Photography</span><span>001</span></li>
-                <li><span>Processing</span><span>001</span></li>
-              </ul>
-            </li>
-            <li><strong>Q</strong></li>
-            <li><strong>R</strong></li>
-            <li><strong>S</strong></li>
-            <li><strong>T</strong></li>
-            <li><strong>U</strong></li>
-            <li><strong>V</strong></li>
-            <li><strong>W</strong>
-              <ul class="list">
-                <li><span>Whole 30</span><span>001</span></li>
-              </ul>
-            </li>
-            <li><strong>X</strong></li>
-            <li><strong>Y</strong></li>
-            <li><strong>Z</strong></li>
-          </ul>
-        </div>
-      </header>
-      <div class="pa3"></div>
-      <header class="app-header">
-        <div class="app-bar">
-          <h1 class="app-title">Anvil</h1>
-          <button class="app-bar__button menu-button" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15"><g fill="#1F1E1A" fill-rule="evenodd"><path d="M20 .575v2H0v-2zM20 6.575v2H0v-2zM20 12.575v2H0v-2z"/></g></svg></button>
-          <button class="app-bar__button keyboard-button" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16"><g fill="none" fill-rule="evenodd"><rect width="23" height="14" x="1" y="1" stroke="#1F1E1A" stroke-width="2" rx="2"/><rect width="1.994" height="1.994" x="4" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4.997" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="8.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="11.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="14.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="17.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4" y="10.024" fill="#1E1D19"/><rect width="11.056" height="1.994" x="6.992" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="7.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="10.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="13.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="16.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="4" fill="#1E1D19"/></g></svg></button>
-        </div>
-      </header>
     </div>
   </body>
 </html>
