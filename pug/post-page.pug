@@ -1,0 +1,50 @@
+extends base.pug
+
+block body
+  .layout-app-container
+    nav.app-bar
+      h1.app-title Anvil
+      button(type="button").app-bar__button.menu-button
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15"><g fill="#1F1E1A" fill-rule="evenodd"><path d="M20 .575v2H0v-2zM20 6.575v2H0v-2zM20 12.575v2H0v-2z"/></g></svg>
+        //- span.show-for-sr Menu
+
+      button(type="button").app-bar__button.keyboard-button
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16"><g fill="none" fill-rule="evenodd"><rect width="23" height="14" x="1" y="1" stroke="#1F1E1A" stroke-width="2" rx="2"/><rect width="1.994" height="1.994" x="4" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4.997" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="8.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="11.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="14.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="17.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4" y="10.024" fill="#1E1D19"/><rect width="11.056" height="1.994" x="6.992" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="7.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="10.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="13.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="16.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="4" fill="#1E1D19"/></g></svg>
+        //- Menu
+
+    main
+
+      article.post
+        p.flex.f-jc.meta
+          span.category #[strong Photgraphy] 001
+          span.date 05.15.19 | #0203
+        h1 The philosophical argument for working less (and wasting time)
+        figure
+          img(src="../images/post-image.jpg", alt="")
+          figcaption This is a caption to credit the image, name the image, talk about the image, link out the image, etc.
+        h2 The Inventive Joy of Leisure
+        p When Russell talks about work in his essay, he is referring to the necessity of manual and bureaucratic labor that takes up most of our collective time, not work as self-expression.
+        p He contends that our attachment of work to the concept of necessity is so strong that we don’t stop to think twice about what we are doing before we over-commit ourselves.
+        p Work is, of course, a profound source of meaning for many. If you’re someone who respects your job and gets joy out of it, then why should you stop putting all you have into it?
+        footer.container-625
+          ul.tags-list
+            li
+              a(href="#") #Photography
+            li
+              a(href="#") #001
+            li
+              a(href="#") #May
+            li
+              a(href="#") #2019
+            li
+              a(href="#") #Working less
+            li
+              a(href="#") #Philosophy
+            li
+              a(href="#") #Leisure
+            li
+              a(href="#") #Writing
+            li
+              a(href="#") #Sunset
+            li
+              a(href="#") #Silhouette
