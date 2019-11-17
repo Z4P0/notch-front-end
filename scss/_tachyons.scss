@@ -25,7 +25,7 @@
 }
 
 
-.monospace {
+.meta {
   font-family: $monospace;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -48,9 +48,6 @@
 
 .bg-grey {
   background-color: $grey;
-}
-.white {
-  color: $white;
 }
 .bg-grey-200 { background-color: $grey-200; }
 .bg-grey-400 { background-color: $grey-400; }

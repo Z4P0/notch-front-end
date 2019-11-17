@@ -11,6 +11,7 @@ body {
   margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'ATC Arquette', Helvetica, Arial;
   font-weight: 500; }
 
 h1 {
@@ -63,8 +64,6 @@ textarea {
 input[type="submit"],
 input[type="reset"],
 button {
-  padding-left: 32px;
-  padding-right: 32px;
   font-size: 1.25rem;
   letter-spacing: 0.18px;
   font-family: inherit;
@@ -88,7 +87,8 @@ kbd {
 .layout-app {
   display: grid;
   grid-template-columns: 4.25rem 1fr;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
 
 .app-main {
   height: 100vh;
@@ -181,6 +181,28 @@ kbd {
   position: absolute;
   top: 0; }
 
+.category-header {
+  padding: 110px 21px 20px; }
+  .category-header h2 {
+    font-size: 1.625rem; }
+  .category-header p {
+    margin-bottom: 0; }
+
+.category-header__description {
+  display: none; }
+  .category-header__description p + p {
+    margin-top: 1rem; }
+  .category-header__description.is-active {
+    display: block; }
+
+.category-header__description__toggle {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  height: 56px;
+  justify-content: center;
+  width: 56px; }
+
 .app-bar__navigation {
   background-color: #292825;
   display: flex;
@@ -270,28 +292,6 @@ kbd {
 
 .select-css:disabled:hover, .select-css[aria-disabled=true] {
   border-color: #aaa; }
-
-.category-bucket-header {
-  padding: 110px 21px 20px; }
-  .category-bucket-header .bucket-title {
-    margin-bottom: 0; }
-    .category-bucket-header .bucket-title + p {
-      margin-bottom: 0;
-      padding-top: 7px; }
-
-.bucket-title {
-  font-size: 1.625rem; }
-
-.thumbnail {
-  background-color: #24231e;
-  height: 80px;
-  width: 80px; }
-
-.content-meta {
-  font-family: "Roboto Mono";
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #999999; }
 
 .category-list__date {
   letter-spacing: 0.3px;
@@ -406,7 +406,6 @@ kbd {
     text-decoration: none; }
   .category-card h3 {
     color: #fff;
-    font-family: 'ATC Arquette', Helvetica, Arial;
     font-size: 1.25rem;
     text-transform: none; }
   .category-card h3, .category-card p {
@@ -519,6 +518,10 @@ kbd {
   display: block;
   margin-bottom: 22px; }
 
+.post .meta {
+  max-width: 620px;
+  margin: 4rem auto 2rem; }
+
 .container-625 {
   max-width: 625px;
   margin-left: auto;
@@ -540,10 +543,6 @@ kbd {
   font-family: "Roboto Mono", Courier, monospace;
   font-size: 0.75rem;
   line-height: 2.333; }
-
-.meta {
-  max-width: 620px;
-  margin: 4rem auto 2rem; }
 
 .tags-list {
   color: #999e9e;
@@ -577,12 +576,17 @@ kbd {
   font-size: 0.75rem;
   padding: 16px 21px;
   text-decoration: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: background-color .3s ease; }
   .post-card img {
-    margin-right: 1rem; }
+    display: block;
+    height: auto;
+    margin-right: 1rem;
+    width: 80px; }
+  .post-card > div {
+    flex: 1; }
   .post-card h3 {
     color: #fff;
-    font-family: 'ATC Arquette', Helvetica, Arial;
     font-size: 0.875rem;
     line-height: 1.125rem;
     margin-bottom: 0;
@@ -632,7 +636,7 @@ li + li .post-card {
 .mb0 {
   margin-bottom: 0; }
 
-.monospace {
+.meta {
   font-family: "Roboto Mono";
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -652,9 +656,6 @@ li + li .post-card {
 
 .bg-grey {
   background-color: #999e9e; }
-
-.white {
-  color: #fff; }
 
 .bg-grey-200 {
   background-color: #292825; }

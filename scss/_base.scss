@@ -12,6 +12,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'ATC Arquette', Helvetica, Arial;
   font-weight: 500;
 }
 
@@ -78,8 +79,8 @@ textarea {
 input[type="submit"],
 input[type="reset"],
 button {
-  padding-left: 32px;
-  padding-right: 32px;
+  // padding-left: 32px;
+  // padding-right: 32px;
   font-size: 1.25rem;
   letter-spacing: 0.18px;
   // button reset

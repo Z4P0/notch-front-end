@@ -1,14 +1,7 @@
-// App bar
-// ==================================================
-
-
-function showAppNav() {
-  document.querySelector('#app-bar').classList.toggle('is-active');
+function toggleActiveClass(domSelector) {
+  document.querySelector(domSelector).classList.toggle('is-active');
 }
 
-function showKeyboardShortcuts() {
-  document.querySelector('#keyboard-shortcuts-list').classList.toggle('is-active');
-}
 
 
 /*
@@ -20,31 +13,6 @@ ClassicEditor
     .catch( error => {
         // console.error( error );
     } );
-
-
-var $newPostModal = document.querySelector('#new-post-modal');
-var $newContentModal = document.querySelector('#new-content-modal');
-
-
-document.querySelector('#new-post-button').addEventListener('click', function(event) {
-    $newPostModal.classList.toggle('hide');
-});
-
-document.querySelector('#new-post-modal--open-new-post-button').addEventListener('click', function(event) {
-    console.log($newContentModal);
-    $newContentModal.classList.toggle('hide');
-});
-
-
-
-
-document.querySelector('#new-post-modal__close-buton').addEventListener('click', function(event) {
-    $newPostModal.classList.toggle('hide');
-});
-
-document.querySelector('#close-button--new-content-modal').addEventListener('click', function(event) {
-    $newContentModal.classList.toggle('hide');
-});
 */
 
 

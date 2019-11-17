@@ -7,6 +7,7 @@ $size-3: 16px;
   display: grid;
   grid-template-columns: 4.25rem 1fr;
   height: 100vh;
+  overflow: hidden;
 }
 .app-main {
   height: 100vh;

@@ -6,94 +6,96 @@ block title
 block body
   .layout-app
 
+    //- full component
     header#app-bar.app-bar
-
       h1.app-title Anvil
 
-
       //- menu
-      button.app-bar__button.menu-button(onclick="showAppNav();", type="button")
+      button.app-bar__button.menu-button(onclick="toggleActiveClass('#app-bar');", type="button")
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="15"><g fill="#1F1E1A" fill-rule="evenodd"><path d="M20 .575v2H0v-2zM20 6.575v2H0v-2zM20 12.575v2H0v-2z"/></g></svg>
         span.show-for-sr Menu
 
       nav#app-nav.app-nav
         h2.show-for-sr App Navigation
-        .app-bar__navigation
-          button
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" fill-rule="evenodd" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg>
-          select#filter.app-bar__filter__dropdown.select-css
-            option(value="") All
-            option(value="1") 001
-            option(value="2") Lorem
-            option(value="2") Ipsum
 
-        ul.list
-          li
-            .category-card.category-card--most-recent
-              a(href="#")
-                p May 2019 — 001
-                h3 Photography
-              p.category-card__extras 7 posts
-                button
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-                  span.show-for-sr More options
-          li
-            .category-card
-              a(href="#")
-                p April 2019 — 001
-                h3 C4D
-              p.category-card__extras 31 posts
-                button
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-                  span.show-for-sr More options
-          li
-            .category-card
-              a(href="#")
-                p March 2019 — 001
-                h3 Illustration
-              p.category-card__extras 31 posts
-                button
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-                  span.show-for-sr More options
-          li
-            .category-card
-              a(href="#")
-                p February 2019 — 001
-                h3 Aquascaping
-              p.category-card__extras 28 posts
-                button
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-                  span.show-for-sr More options
-          li
-            .category-card
-              a(href="#")
-                p 2019
-                h3 February
-              p.category-card__extras 28 posts
-                button
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-                  span.show-for-sr More options
-          li
-            .category-card
-              a(href="#")
-                p 2019
-                h3 January
-              p.category-card__extras 31 posts
-                button
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g fill="#FFF" fill-rule="evenodd" transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-                  span.show-for-sr More options
+        section.nav-section
+          .app-bar__navigation
+            button
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg>
+            select#filter.app-bar__filter__dropdown.select-css
+              option(value="") All
+              option(value="1") 001
+              option(value="2") Lorem
+              option(value="2") Ipsum
 
+          ul.list
+            li
+              .category-card.category-card--most-recent
+                a(href="")
+                  p May 2019 — 001
+                  h3 Photography
+                p.card-extras 7 posts
+                  button
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                    span.show-for-sr More options
+            li
+              .category-card
+                a(href="")
+                  p April 2019 — 001
+                  h3 C4D
+                p.card-extras 31 posts
+                  button
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                    span.show-for-sr More options
+            li
+              .category-card
+                a(href="")
+                  p March 2019 — 001
+                  h3 Illustration
+                p.card-extras 31 posts
+                  button
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                    span.show-for-sr More options
+            li
+              .category-card
+                a(href="")
+                  p February 2019 — 001
+                  h3 Aquascaping
+                p.card-extras 28 posts
+                  button
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                    span.show-for-sr More options
+            li
+              .category-card
+                a(href="")
+                  p 2019
+                  h3 February
+                p.card-extras 28 posts
+                  button
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                    span.show-for-sr More options
+            li
+              .category-card
+                a(href="")
+                  p 2019
+                  h3 January
+                p.card-extras 31 posts
+                  button
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                    span.show-for-sr More options
 
-      button#keyboard-shortcuts-toggle.app-bar__button.keyboard-button(onclick="showKeyboardShortcuts();", type="button")
+        section.nav-section
+
+      //- keyboard shortcuts
+      button.app-bar__button.keyboard-button(onclick="toggleActiveClass('#keyboard-shortcuts-list');", type="button")
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16"><g fill="none" fill-rule="evenodd"><rect width="23" height="14" x="1" y="1" stroke="#1F1E1A" stroke-width="2" rx="2"/><rect width="1.994" height="1.994" x="4" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4.997" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="8.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="11.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="14.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="17.059" y="7.003" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="4" y="10.024" fill="#1E1D19"/><rect width="11.056" height="1.994" x="6.992" y="10.024" fill="#1E1D19"/><rect width="1.994" height="1.994" x="7.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="10.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="13.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="16.053" y="4" fill="#1E1D19"/><rect width="1.994" height="1.994" x="19.053" y="4" fill="#1E1D19"/></g></svg>
         span.show-for-sr Keyboard Shortcuts
 
-      dl#keyboard-shortcuts-list.keyboard-shortcuts
+      dl.keyboard-shortcuts#keyboard-shortcuts-list
         dt New Category Post
         dd #[kbd Cmd] + #[kbd Shift] + #[kbd C]
         dt New Date Post
         dd #[kbd Cmd] + #[kbd Shift] + #[kbd D]
-
 
 
     main.app-main

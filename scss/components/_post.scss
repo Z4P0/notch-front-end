@@ -47,6 +47,10 @@ $content-max-width: 625px;
       margin-bottom: 22px;
     }
   }
+  .meta {
+    max-width: 620px;
+    margin: 4rem auto 2rem;
+  }
 }
 
 .container-625 {
@@ -73,11 +77,6 @@ $content-max-width: 625px;
   font-family: "Roboto Mono", Courier, monospace;
   font-size: 0.75rem;
   line-height: 2.333;
-}
-
-.meta {
-  max-width: 620px;
-  margin: 4rem auto 2rem;
 }
 
 

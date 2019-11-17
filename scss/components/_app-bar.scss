@@ -98,6 +98,41 @@
 
 
 
+
+
+.category-header {
+  padding: 110px 21px 20px;
+  h2 {
+    font-size: 1.625rem;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.category-header__description {
+  display: none;
+  p + p {
+    margin-top: 1rem;
+  }
+  &.is-active {
+    display: block;
+  }
+}
+
+.category-header__description__toggle {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  height: 56px;
+  justify-content: center;
+  width: 56px;
+}
+
+
+
+
+
+
 .app-bar__navigation {
   background-color: #292825;
   display: flex;
@@ -205,41 +240,6 @@
 .select-css:disabled:hover, .select-css[aria-disabled=true] {
   border-color: #aaa;
 }
-
-
-
-// ==================================================
-// Buckets
-
-.category-bucket-header {
-  padding: 110px 21px 20px;
-  .bucket-title {
-    margin-bottom: 0;
-    + p {
-      margin-bottom: 0;
-      padding-top: 7px;
-    }
-  }
-}
-
-.bucket-title {
-  font-size: 1.625rem;
-}
-
-.thumbnail {
-  background-color: #24231e;
-  height: 80px;
-  width: 80px;
-}
-
-.content-meta {
-  font-family: $monospace;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #999999;
-}
-
-
 
 
 
