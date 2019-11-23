@@ -1,0 +1,28 @@
+.category-header {
+  padding: 110px 21px 20px;
+  h2 {
+    font-size: 1.625rem;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.category-header__description {
+  display: none;
+  p + p {
+    margin-top: 1rem;
+  }
+  &.is-active {
+    display: block;
+  }
+}
+
+.category-header__description__toggle {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  height: 56px;
+  justify-content: center;
+  width: 56px;
+}
+

@@ -1,0 +1,26 @@
+.app-bar__button {
+  background-color: transparent;
+  left: 0;
+  padding: 1rem 0;
+  position: absolute;
+  right: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+}
+.menu-button {
+  opacity: 0.8;
+  top: 0;
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+.keyboard-button {
+  bottom: 0;
+  opacity: 0.2;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
