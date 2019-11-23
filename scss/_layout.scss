@@ -1,8 +1,3 @@
-$size-2: 8px;
-$size-3: 16px;
-
-
-
 .layout-app {
   display: grid;
   grid-template-columns: 4.25rem 1fr;
@@ -18,7 +13,7 @@ $size-3: 16px;
   }
 }
 
-.row {
+.section {
   padding: 0 1rem;
 }
 

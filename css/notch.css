@@ -97,7 +97,7 @@ kbd {
   .app-bar.is-active + .app-main {
     transform: translateX(336px); }
 
-.row {
+.section {
   padding: 0 1rem; }
 
 .spacer {
@@ -134,6 +134,11 @@ kbd {
   margin: auto;
   writing-mode: sideways-lr; }
 
+.app-bar .app-nav {
+  right: 100%;
+  position: absolute;
+  top: 0; }
+
 .app-bar .keyboard-shortcuts {
   bottom: 0;
   left: 54px;
@@ -144,21 +149,6 @@ kbd {
   .app-bar .keyboard-shortcuts.is-active {
     opacity: 1;
     visibility: visible; }
-
-.app-nav {
-  background-color: #1F1E1A;
-  color: #fff;
-  height: 100vh;
-  overflow: scroll;
-  width: 336px; }
-  .app-nav button {
-    background-color: transparent;
-    margin-bottom: 0; }
-
-.app-bar .app-nav {
-  right: 100%;
-  position: absolute;
-  top: 0; }
 
 .category-list__date {
   letter-spacing: 0.3px;
@@ -278,22 +268,42 @@ kbd {
   justify-content: center;
   width: 56px; }
 
-.app-bar__navigation {
+.app-nav, .app-nav__section {
+  background-color: #1F1E1A;
+  color: #fff;
+  height: 100vh;
+  overflow: scroll;
+  width: 336px; }
+
+.app-nav__section {
+  position: relative;
+  transition: transform .3s ease;
+  z-index: 1; }
+  .app-nav .app-nav__section:not(:first-of-type) {
+    position: absolute;
+    right: 100%;
+    top: 0; }
+    .app-nav .app-nav__section:not(:first-of-type).is-active {
+      transform: translateX(336px); }
+
+.app-nav__section__options {
   background-color: #292825;
   display: flex;
-  height: 56px;
-  left: 0;
-  position: sticky;
-  top: 0;
-  z-index: 100; }
-  .app-bar__navigation button {
+  height: 56px; }
+  .app-nav__section__options button {
+    background-color: transparent;
     border-radius: 0;
+    margin-bottom: 0;
     padding: initial;
     width: 56px; }
-    .app-bar__navigation button:first-child {
-      border-right: 1px solid #1F1E1A; }
-    .app-bar__navigation button:nth-child(2) {
-      margin-left: auto; }
+    .app-nav__section__options button:first-child {
+      border-right: 1px solid #1F1E1A;
+      margin-right: auto; }
+  .app-nav .app-nav__section__options {
+    left: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100; }
 
 .app-bar__filter__dropdown {
   margin-bottom: 0; }
@@ -379,12 +389,50 @@ kbd {
   padding: 8px; }
 
 .card-extras {
+  align-items: center;
+  color: #999999;
   display: flex;
-  justify-content: flex-end; }
+  font-family: "Roboto Mono";
+  font-size: 0.75rem;
+  justify-content: flex-end;
+  letter-spacing: 1.76px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-right: 4px; }
+  .card-extras p {
+    margin-bottom: 0; }
   .card-extras button {
     background-color: transparent;
     margin: 0 0 0 5px;
-    padding: 0 0 0 13px; }
+    padding: 8px 12px; }
+  .card-extras ul {
+    background-color: #1F1E1A;
+    border: 1px solid #080706;
+    border-radius: 4px;
+    list-style: none;
+    margin: 0;
+    min-width: 117px;
+    opacity: 0;
+    padding: 8px 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease; }
+    .card-extras ul button {
+      color: #fff;
+      display: block;
+      font-family: "ATC Arquette";
+      font-size: 1rem;
+      margin: 0;
+      padding: 2px 12px;
+      text-align: left;
+      width: 100%; }
+      .card-extras ul button:hover {
+        background-color: #292825; }
+  .card-extras.is-active ul {
+    opacity: 1;
+    visibility: visible; }
 
 .category-card {
   background-color: #292825;
@@ -570,31 +618,40 @@ kbd {
 
 .post-card {
   border: 1px solid #080706;
+  padding: 16px 21px;
+  position: relative;
+  transition: background-color .3s ease; }
+  .post-card .card-extras {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .post-card:hover {
+    background-color: #292825; }
+
+.post-card__content {
   color: #999999;
   display: flex;
   font-family: "Roboto Mono";
   font-size: 0.75rem;
-  padding: 16px 21px;
   text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color .3s ease; }
-  .post-card img {
+  text-transform: uppercase; }
+  .post-card__content img {
     display: block;
     height: auto;
     margin-right: 1rem;
     width: 80px; }
-  .post-card > div {
-    flex: 1; }
-  .post-card h3 {
+  .post-card__content div {
+    display: flex;
+    flex: 1;
+    flex-direction: column-reverse; }
+  .post-card__content h3 {
     color: #fff;
     font-size: 0.875rem;
     line-height: 1.125rem;
     margin-bottom: 0;
     text-transform: none; }
-  .post-card p {
+  .post-card__content p {
     margin-bottom: 0; }
-  .post-card:hover {
-    background-color: #292825; }
 
 li + li .post-card {
   border-top: none; }

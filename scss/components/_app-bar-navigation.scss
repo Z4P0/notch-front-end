@@ -1,31 +1,74 @@
-.app-bar__navigation {
-  background-color: #292825;
-  display: flex;
-  height: 56px;
-  left: 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  button {
-    border-radius: 0;
-    padding: initial;
-    width: 56px;
-    &:first-child {
-      border-right: 1px solid $grey-400;
-    }
-    &:nth-child(2) {
-      margin-left: auto;
+$width: 336px;
+
+%app-nav {
+  background-color: $grey-400;
+  color: #fff;
+  height: 100vh;
+  overflow: scroll;
+  width: $width;
+}
+
+.app-nav {
+  @extend %app-nav;
+}
+
+
+.app-nav__section {
+  @extend %app-nav;
+  position: relative;
+  transition: transform .3s ease;
+  z-index: 1;
+  .app-nav &:not(:first-of-type) {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    &.is-active {
+      transform: translateX($width);
     }
   }
 }
 
 
 
-.app-bar__filter__dropdown {
-  margin-bottom: 0;
+
+
+
+.app-nav__section__options {
+  background-color: #292825;
+  display: flex;
+  height: 56px;
+  button {
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: initial;
+    width: 56px;
+    &:first-child {
+      border-right: 1px solid $grey-400;
+      margin-right: auto;
+    }
+  }
+
+  .app-nav & {
+    left: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
 }
 
 
+
+
+
+
+
+
+
+
+.app-bar__filter__dropdown {
+  margin-bottom: 0;
+}
 
 
 /* class applies to select element itself, not a wrapper element */
@@ -106,6 +149,3 @@
 .select-css:disabled:hover, .select-css[aria-disabled=true] {
   border-color: #aaa;
 }
-
-
-

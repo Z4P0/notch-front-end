@@ -5,6 +5,9 @@ hr
 
 .layout-app
 
+
+
+
     //- full component
     header#app-bar.app-bar
       h1.app-title Anvil
@@ -17,8 +20,11 @@ hr
       nav#app-nav.app-nav
         h2.show-for-sr App Navigation
 
-        section.nav-section
-          .app-bar__navigation
+
+        //- Categories
+        //- ==================================================
+        section.app-nav__section
+          .app-nav__section__options
             button
               <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg>
             select#filter.app-bar__filter__dropdown.select-css
@@ -30,7 +36,7 @@ hr
           ul.list
             li
               .category-card.category-card--most-recent
-                a(href="")
+                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p May 2019 — 001
                   h3 Photography
                 p.card-extras 7 posts
@@ -39,7 +45,7 @@ hr
                     span.show-for-sr More options
             li
               .category-card
-                a(href="")
+                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p April 2019 — 001
                   h3 C4D
                 p.card-extras 31 posts
@@ -48,7 +54,7 @@ hr
                     span.show-for-sr More options
             li
               .category-card
-                a(href="")
+                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p March 2019 — 001
                   h3 Illustration
                 p.card-extras 31 posts
@@ -57,7 +63,7 @@ hr
                     span.show-for-sr More options
             li
               .category-card
-                a(href="")
+                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p February 2019 — 001
                   h3 Aquascaping
                 p.card-extras 28 posts
@@ -66,7 +72,7 @@ hr
                     span.show-for-sr More options
             li
               .category-card
-                a(href="")
+                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p 2019
                   h3 February
                 p.card-extras 28 posts
@@ -75,7 +81,7 @@ hr
                     span.show-for-sr More options
             li
               .category-card
-                a(href="")
+                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p 2019
                   h3 January
                 p.card-extras 31 posts
@@ -83,7 +89,96 @@ hr
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                     span.show-for-sr More options
 
-        section.nav-section
+
+        //- Category posts
+        //- ==================================================
+        section#category-posts-nav-section.app-nav__section
+
+          .app-nav__section__options
+            button(
+              onclick="toggleActiveClass('#category-posts-nav-section');",
+              type="button")
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16"><polyline fill="none" stroke="#FFF" stroke-width="2" points="29.985 21.5 23.485 28 29.985 34.5" transform="translate(-22 -20)"/></svg>
+            //- button <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><g fill="none" transform="translate(1.485 -.5)"><text fill="#999" font-family="ATCArquette-Medium, ATC Arquette" font-size="14" font-weight="400" letter-spacing=".2"><tspan x="6" y="14">i</tspan></text><circle cx="8" cy="9" r="8" stroke="#999"/></g></svg>
+            button.category-header__description__toggle(
+              onclick="toggleActiveClass('#category-header__description2');",
+              type="button")
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><g fill="none" transform="translate(1.485 -.5)"><text fill="#999" font-family="ATCArquette-Medium, ATC Arquette" font-size="14" font-weight="400" letter-spacing=".2"><tspan x="6" y="14">i</tspan></text><circle cx="8" cy="9" r="8" stroke="#999"/></g></svg>
+              span.show-for-sr More info
+
+          header.category-header
+            p.meta May 2019 — 001
+            h2 Photography
+            #category-header__description2.category-header__description
+              p Chapter 002 for Photography will be focused exclusively on film photography. This is my first time with film, so I’ll be learning the ins and the outs of the process of development as well as how to use the camera.
+
+          ul.list
+            li
+              .post-card
+                a(href="#").post-card__content
+                  img(src="../images/thumbnail-4.png", alt="")
+                  div
+                    h3 The philosophical argument for working less (and...
+                    p 05.15.19
+                #card-extras-A.card-extras
+                  p #0203
+                  button(type="button", onclick="toggleActiveClass('#card-extras-A');")
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                  ul
+                    li
+                      button(type="button") Edit
+                    li
+                      button(type="button") Delete
+            li
+              .post-card
+                a(href="#").post-card__content
+                  img(src="../images/thumbnail-3.png", alt="")
+                  div
+                    h3 Of Coffeehouses Combined With Its Popularity
+                    p 05.14.19
+                #card-extras-B.card-extras
+                  p #0202
+                  button(type="button", onclick="toggleActiveClass('#card-extras-B');")
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                  ul
+                    li
+                      button(type="button") Edit
+                    li
+                      button(type="button") Delete
+            li
+              .post-card
+                a(href="#").post-card__content
+                  img(src="../images/thumbnail-2.png", alt="")
+                  div
+                    h3 With the Modern Creative Class
+                    p 05.13.19
+                #card-extras-C.card-extras
+                  p #0201
+                  button(type="button", onclick="toggleActiveClass('#card-extras-C');")
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                  ul
+                    li
+                      button(type="button") Edit
+                    li
+                      button(type="button") Delete
+            li
+              .post-card
+                a(href="#").post-card__content
+                  img(src="../images/thumbnail-3.png", alt="")
+                  div
+                    h3 Has Led to Hipsters Exerting a Strong Influence
+                    p 05.12.19
+                #card-extras-D.card-extras
+                  p #0200
+                  button(type="button", onclick="toggleActiveClass('#card-extras-D');")
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                  ul
+                    li
+                      button(type="button") Edit
+                    li
+                      button(type="button") Delete
+
+
 
       //- keyboard shortcuts
       button.app-bar__button.keyboard-button(onclick="toggleActiveClass('#keyboard-shortcuts-list');", type="button")
@@ -96,15 +191,34 @@ hr
         dt New Date Post
         dd #[kbd Cmd] + #[kbd Shift] + #[kbd D]
 
-    .app-main.row
 
-      h3 Keyboard Shortcuts
+
+
+
+
+    .app-main.section
+
+
+      h3 App Bar Navigation
       //- ==================================================
-      dl.keyboard-shortcuts
-        dt New Category Post
-        dd #[kbd Cmd] + #[kbd Shift] + #[kbd C]
-        dt New Date Post
-        dd #[kbd Cmd] + #[kbd Shift] + #[kbd D]
+      .app-nav__section__options
+        button
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg>
+        select#filter.app-bar__filter__dropdown.select-css
+          option(value="") All
+          option(value="1") 001
+          option(value="2") Lorem
+          option(value="2") Ipsum
+      .pv2
+
+      .app-nav__section__options
+        button
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16"><polyline fill="none" stroke="#FFF" stroke-width="2" points="29.985 21.5 23.485 28 29.985 34.5" transform="translate(-22 -20)"/></svg>
+        button.category-header__description__toggle(
+          type="button",
+          onclick="toggleActiveClass('#category-header__description2');")
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><g fill="none" transform="translate(1.485 -.5)"><text fill="#999" font-family="ATCArquette-Medium, ATC Arquette" font-size="14" font-weight="400" letter-spacing=".2"><tspan x="6" y="14">i</tspan></text><circle cx="8" cy="9" r="8" stroke="#999"/></g></svg>
+          span.show-for-sr More info
 
       .spacer
 
@@ -153,100 +267,133 @@ hr
 
       h3 Post Card
       .row.bg-grey-400.white.pv3
-        a(href="#").post-card
-          img(src="../images/thumbnail-4.png", alt="")
-          div
-            h3 The philosophical argument for working less (and wasting time)
-            p 05.15.19
-            p.card-extras #0203
-              button(type="button")
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+        .post-card
+          a(href="#").post-card__content
+            img(src="../images/thumbnail-4.png", alt="")
+            div
+              h3 The philosophical argument for working less (and wasting time)
+              p 05.15.19
+          #card-extras-1.card-extras
+            p #0203
+            button(type="button", onclick="toggleActiveClass('#card-extras-1');")
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+            ul
+              li
+                button(type="button") Edit
+              li
+                button(type="button") Delete
 
       .spacer
 
 
-      h3 Nav Section
+      h3 App Nav Section
       //- ==================================================
-      section.nav-section
+      .flex.justify-between
+        div
+          h4 Default container
+          .app-nav__section
+        div
+          h4 Bucket Items
+          .app-nav__section
+            .app-nav__section__options
+              button <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16"><polyline fill="none" stroke="#FFF" stroke-width="2" points="29.985 21.5 23.485 28 29.985 34.5" transform="translate(-22 -20)"/></svg>
+              //- button <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><g fill="none" transform="translate(1.485 -.5)"><text fill="#999" font-family="ATCArquette-Medium, ATC Arquette" font-size="14" font-weight="400" letter-spacing=".2"><tspan x="6" y="14">i</tspan></text><circle cx="8" cy="9" r="8" stroke="#999"/></g></svg>
+              button.category-header__description__toggle(onclick="toggleActiveClass('#category-header__description2b');", type="button")
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><g fill="none" transform="translate(1.485 -.5)"><text fill="#999" font-family="ATCArquette-Medium, ATC Arquette" font-size="14" font-weight="400" letter-spacing=".2"><tspan x="6" y="14">i</tspan></text><circle cx="8" cy="9" r="8" stroke="#999"/></g></svg>
+                span.show-for-sr More info
+
+            header.category-header
+              p.meta May 2019 — 001
+              h2 Photography
+              #category-header__description2b.category-header__description
+                p Chapter 002 for Photography will be focused exclusively on film photography. This is my first time with film, so I’ll be learning the ins and the outs of the process of development as well as how to use the camera.
+
+            ul.list
+              li
+                .post-card
+                  a(href="#").post-card__content
+                    img(src="../images/thumbnail-4.png", alt="")
+                    div
+                      h3 The philosophical argument for working less (and...
+                      p 05.15.19
+                  #card-extras-A.card-extras
+                    p #0203
+                    button(type="button", onclick="toggleActiveClass('#card-extras-A');")
+                      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                    ul
+                      li
+                        button(type="button") Edit
+                      li
+                        button(type="button") Delete
+              li
+                .post-card
+                  a(href="#").post-card__content
+                    img(src="../images/thumbnail-3.png", alt="")
+                    div
+                      h3 Of Coffeehouses Combined With Its Popularity
+                      p 05.14.19
+                  #card-extras-B.card-extras
+                    p #0202
+                    button(type="button", onclick="toggleActiveClass('#card-extras-B');")
+                      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                    ul
+                      li
+                        button(type="button") Edit
+                      li
+                        button(type="button") Delete
+              li
+                .post-card
+                  a(href="#").post-card__content
+                    img(src="../images/thumbnail-2.png", alt="")
+                    div
+                      h3 With the Modern Creative Class
+                      p 05.13.19
+                  #card-extras-C.card-extras
+                    p #0201
+                    button(type="button", onclick="toggleActiveClass('#card-extras-C');")
+                      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                    ul
+                      li
+                        button(type="button") Edit
+                      li
+                        button(type="button") Delete
+              li
+                .post-card
+                  a(href="#").post-card__content
+                    img(src="../images/thumbnail-3.png", alt="")
+                    div
+                      h3 Has Led to Hipsters Exerting a Strong Influence
+                      p 05.12.19
+                  #card-extras-D.card-extras
+                    p #0200
+                    button(type="button", onclick="toggleActiveClass('#card-extras-D');")
+                      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
+                    ul
+                      li
+                        button(type="button") Edit
+                      li
+                        button(type="button") Delete
+
 
       .spacer
 
 
-      h3 App Bar Navigation
+      h3 Keyboard Shortcuts
       //- ==================================================
-      section.nav-section
-      .app-bar__navigation
-        button <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16"><polyline fill="none" stroke="#FFF" stroke-width="2" points="29.985 21.5 23.485 28 29.985 34.5" transform="translate(-22 -20)"/></svg>
-        //- button <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><g fill="none" transform="translate(1.485 -.5)"><text fill="#999" font-family="ATCArquette-Medium, ATC Arquette" font-size="14" font-weight="400" letter-spacing=".2"><tspan x="6" y="14">i</tspan></text><circle cx="8" cy="9" r="8" stroke="#999"/></g></svg>
-        button.category-header__description__toggle(onclick="toggleActiveClass('#category-header__description2');", type="button")
-          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><g fill="none" transform="translate(1.485 -.5)"><text fill="#999" font-family="ATCArquette-Medium, ATC Arquette" font-size="14" font-weight="400" letter-spacing=".2"><tspan x="6" y="14">i</tspan></text><circle cx="8" cy="9" r="8" stroke="#999"/></g></svg>
-          span.show-for-sr More info
+      dl.keyboard-shortcuts
+        dt New Category Post
+        dd #[kbd Cmd] + #[kbd Shift] + #[kbd C]
+        dt New Date Post
+        dd #[kbd Cmd] + #[kbd Shift] + #[kbd D]
+
+      .spacer
 
 
 .spacer
 
 
-h3 Bucket Items
 //- ==================================================
 
-//- .root
-.app-nav
-  .app-bar__navigation
-    button <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16"><polyline fill="none" stroke="#FFF" stroke-width="2" points="29.985 21.5 23.485 28 29.985 34.5" transform="translate(-22 -20)"/></svg>
-    //- button <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><g fill="none" transform="translate(1.485 -.5)"><text fill="#999" font-family="ATCArquette-Medium, ATC Arquette" font-size="14" font-weight="400" letter-spacing=".2"><tspan x="6" y="14">i</tspan></text><circle cx="8" cy="9" r="8" stroke="#999"/></g></svg>
-    button.category-header__description__toggle(onclick="toggleActiveClass('#category-header__description2');", type="button")
-      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><g fill="none" transform="translate(1.485 -.5)"><text fill="#999" font-family="ATCArquette-Medium, ATC Arquette" font-size="14" font-weight="400" letter-spacing=".2"><tspan x="6" y="14">i</tspan></text><circle cx="8" cy="9" r="8" stroke="#999"/></g></svg>
-      span.show-for-sr More info
-
-  header.category-header
-    p.meta May 2019 — 001
-    h2 Photography
-    #category-header__description2.category-header__description
-      p Chapter 002 for Photography will be focused exclusively on film photography. This is my first time with film, so I’ll be learning the ins and the outs of the process of development as well as how to use the camera.
-  ul.list
-    li
-      a(href="#").post-card
-        img(src="../images/thumbnail-4.png", alt="")
-        div
-          h3 The philosophical argument for working less (and...
-          p 05.15.19
-          p.card-extras #0203
-            button(type="button")
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-    li
-      a(href="#").post-card
-        img(src="../images/thumbnail-3.png", alt="")
-        div
-          h3 Of Coffeehouses Combined With Its Popularity
-          p 05.14.19
-          p.card-extras #0202
-            button(type="button")
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-    li
-      a(href="#").post-card
-        img(src="../images/thumbnail-2.png", alt="")
-        div
-          h3 With the Modern Creative Class
-          p 05.13.19
-          p.card-extras #0201
-            button(type="button")
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-          //- ul
-            li
-              a(href="#") Edit
-            li
-              a(href="#") Delete
-    li
-      a(href="#").post-card
-        img(src="../images/thumbnail-3.png", alt="")
-        div
-          h3 Has Led to Hipsters Exerting a Strong Influence
-          p 05.12.19
-          p.card-extras #0200
-            button(type="button")
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
-
-//- .spacer
 
 
 
@@ -265,7 +412,7 @@ h3 Bucket Items
 
   //- .root
   .app-nav
-    .app-bar__navigation
+    .app-nav__section__options
       button
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><polygon fill="#999" points="24.609 23.91 34.36 23.91 30.264 28.937 30.264 33.575 28.643 32.129 28.643 28.937" transform="translate(-24 -23)"/></svg>
       select#filter.app-bar__filter__dropdown.select-css
