@@ -36,58 +36,94 @@ hr
           ul.list
             li
               .category-card.category-card--most-recent
-                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
+                a.category-card__content(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p May 2019 — 001
                   h3 Photography
-                p.card-extras 7 posts
+                .card-extras
+                  p 7 posts
                   button
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                     span.show-for-sr More options
+                  ul
+                    li
+                      button(type="button") Edit
+                    li
+                      button(type="button") Delete
             li
               .category-card
-                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
+                a.category-card__content(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p April 2019 — 001
                   h3 C4D
-                p.card-extras 31 posts
+                .card-extras
+                  p 31 posts
                   button
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                     span.show-for-sr More options
+                  ul
+                    li
+                      button(type="button") Edit
+                    li
+                      button(type="button") Delete
             li
               .category-card
-                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
+                a.category-card__content(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p March 2019 — 001
                   h3 Illustration
-                p.card-extras 31 posts
+                .card-extras
+                  p 31 posts
                   button
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                     span.show-for-sr More options
+                  ul
+                    li
+                      button(type="button") Edit
+                    li
+                      button(type="button") Delete
             li
               .category-card
-                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
+                a.category-card__content(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p February 2019 — 001
                   h3 Aquascaping
-                p.card-extras 28 posts
+                .card-extras
+                  p 28 posts
                   button
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                     span.show-for-sr More options
+                  ul
+                    li
+                      button(type="button") Edit
+                    li
+                      button(type="button") Delete
             li
               .category-card
-                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
+                a.category-card__content(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p 2019
                   h3 February
-                p.card-extras 28 posts
+                .card-extras
+                  p 28 posts
                   button
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                     span.show-for-sr More options
+                  ul
+                    li
+                      button(type="button") Edit
+                    li
+                      button(type="button") Delete
             li
               .category-card
-                a(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
+                a.category-card__content(href="#category-posts-nav-section", onclick="toggleActiveClass('#category-posts-nav-section');")
                   p 2019
                   h3 January
-                p.card-extras 31 posts
+                .card-extras
+                  p 31 posts
                   button
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
                     span.show-for-sr More options
+                  ul
+                    li
+                      button(type="button") Edit
+                    li
+                      button(type="button") Delete
 
 
         //- Category posts
@@ -228,22 +264,34 @@ hr
       //- ==================================================
       .row.bg-grey-400.white.pv3
         .category-card
-          a(href="#")
+          a(href="#").category-card__content
             p April 2019 — 001
             h3 C4D
-          p.card-extras 31 posts
+          .card-extras
+            p 31 posts
             button(type="button")
               <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
               span.show-for-sr More options
+            ul
+              li
+                button(type="button") Edit
+              li
+                button(type="button") Delete
 
         .category-card.category-card--most-recent
-          a(href="#")
+          a(href="#").category-card__content
             p April 2019 — 001
             h3 C4D
-          p.card-extras 31 posts
+          .card-extras
+            p 31 posts
             button(type="button")
               <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="3" height="13" viewBox="0 0 3 13"><g transform="translate(.485)"><ellipse cx="1" cy="1.758" rx="1" ry="1"/><ellipse cx="1" cy="6.648" rx="1" ry="1"/><ellipse cx="1" cy="11.538" rx="1" ry="1"/></g></svg>
               span.show-for-sr More options
+            ul
+              li
+                button(type="button") Edit
+              li
+                button(type="button") Delete
 
       .spacer
 

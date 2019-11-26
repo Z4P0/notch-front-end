@@ -444,20 +444,29 @@ kbd {
   font-size: 0.75rem;
   margin: 1rem;
   padding: 0.75rem 1rem 0.5rem;
+  position: relative;
   text-transform: uppercase;
   transition: background-color .3s ease;
   will-change: background-color; }
   .category-card:hover {
     background-color: #302f2d; }
-  .category-card a {
-    color: inherit;
-    text-decoration: none; }
-  .category-card h3 {
+  .category-card .card-extras {
+    position: absolute;
+    top: 0;
+    right: 0; }
+
+.category-card__content {
+  color: inherit;
+  padding-top: 24px;
+  text-decoration: none; }
+  .category-card__content h3, .category-card__content p {
+    margin-bottom: 0; }
+  .category-card__content h3 {
     color: #fff;
     font-size: 1.25rem;
     text-transform: none; }
-  .category-card h3, .category-card p {
-    margin-bottom: 0; }
+  .category-card__content p {
+    line-height: 1; }
 
 .category-card--most-recent {
   background-color: #fff;
