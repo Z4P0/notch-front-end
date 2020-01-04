@@ -132,7 +132,7 @@ kbd {
   font-size: 1rem;
   font-weight: 600;
   margin: auto;
-  writing-mode: sideways-lr; }
+  transform: rotate(-90deg); }
 
 .app-bar .app-nav {
   right: 100%;
