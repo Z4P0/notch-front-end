@@ -13,6 +13,7 @@
     "live-reload": "live-server --quiet --port=4040 --open=src/html --watch=src/html/,src/css/,src/js/",
     "servers": "npm run live-reload & npm run regular-server",
     "build": "npm run html && npm run css",
+    "postbuild": "cp src/html/index.html src/css/notch.min.css dist/",
     "watch": "npm run html:watch & npm run css:watch"
   },
   "author": "Luis Rosario",
